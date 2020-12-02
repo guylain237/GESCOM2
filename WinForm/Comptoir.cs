@@ -58,33 +58,87 @@ namespace WinForm
 
         private void buttajout_Click(object sender, EventArgs e)
         {
-            COMPTOIR comptoir = new COMPTOIR
-               (
+            try
+            {   
+                COMPTOIR comptoir = new COMPTOIR
+                   (
 
-                textCODE.Text,
-                textDESIGNATION.Text,
-                int.Parse(textQUANTITE.Text),
-                 float.Parse(textTVA.Text),
-                double.Parse(textPRIX.Text),
-                
-               double.Parse(textTOTAL.Text)
-                //DateTime.Now.ToString(dateTimePicker2.Text)
+                    textCODE.Text,
+                    textDESIGNATION.Text,
+                    int.Parse(textQUANTITE.Text),
+                     float.Parse(textTVA.Text),
+                    double.Parse(textPRIX.Text),
+
+                   double.Parse(textTOTAL.Text)
+                           //DateTime.Now.ToString(dateTimePicker2.Text)
 
 
 
 
-                       ) ;
-            VENTEBLO comptoirBLO = new VENTEBLO(ConfigurationManager.AppSettings["Dbfolder"]);
-            comptoirBLO.Commande(comptoir);
+                           );
 
-            MessageBox.Show(
-                "save done",
-                "confirmation",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
 
+
+
+                VENTEBLO comptoirBLO = new VENTEBLO(ConfigurationManager.AppSettings["DbFolder"]);
+
+                if (this.oldcommande == null)
+                    comptoirBLO.Commande(newcommande);
+                else
+                    comptoirBLO.Commande(oldcommande, newcommande);
+
+                MessageBox.Show
+                (
+                    "Save done !",
+                    "Confirmation",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
                 );
-            if (callback != null)
+            }
+
+
+            catch (TypingException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Typing error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (DuplicateNameException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Duplicate error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (KeyNotFoundException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Not found error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (Exception ex)
+            {
+                ex.WriteToFile();
+                MessageBox.Show
+               (
+                   "An error occurred! Please try again later.",
+                   "Erreur",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error
+               );
+            }
+if (callback != null)
                 callback();
             textCODE.Clear();
             textDESIGNATION.Clear();
@@ -96,6 +150,25 @@ namespace WinForm
             textCODE.Focus();
 
 
+        }
+        private void checkForm()
+        {
+            string text = string.Empty;
+            textCODE.BackColor = Color.White;
+            textDESIGNATION.BackColor = Color.White;
+            if (string.IsNullOrWhiteSpace(textCODE.Text))
+            {
+                text += "- Please enter the reference ! \n";
+                textCODE.BackColor = Color.Pink;
+            }
+            if (string.IsNullOrWhiteSpace(textDESIGNATION.Text))
+            {
+                text += "- Please enter the name ! \n";
+                textDESIGNATION.BackColor = Color.Pink;
+            }
+
+            if (!string.IsNullOrEmpty(text))
+                throw new TypingException(text);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

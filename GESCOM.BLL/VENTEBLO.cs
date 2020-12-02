@@ -40,9 +40,9 @@ namespace GESCOM.BLL
             return REPO.find(predicate);
         }
 
-        //public void EditProduct(Product oldProduct, Product newProduct)
-        //{
-        //    productRepo.Set(oldProduct, newProduct);
-        //}
+        public void Editcommande(COMPTOIR oldcommande, COMPTOIR newcommande)
+        {
+            productRepo.Set(oldcommande, newcommande);
+        }
     }
 }

@@ -44,15 +44,15 @@ namespace GESCOM.DA
             }
 
         }
-        public void Set(COMPTOIR oldCOMPTOIR, COMPTOIR newCOMPTOIR)
+        public void Set(COMPTOIR oldcommande, COMPTOIR newcommande)
         {
-            var oldIndex = comptoirs.IndexOf(oldCOMPTOIR);
-            var newIndex = comptoirs.IndexOf(newCOMPTOIR);
+            var oldIndex = comptoirs.IndexOf(oldcommande);
+            var newIndex = comptoirs.IndexOf(newcommande);
             if (oldIndex < 0)
                 throw new KeyNotFoundException("The comptoir doesn't exists !");
-            //if (newIndex >= 0 && oldIndex != newIndex)
-            //    throw new DuplicateNameException("This comptoir reference already exists !");
-            comptoirs[oldIndex] = newCOMPTOIR;
+            if (newIndex >= 0 && oldIndex != newIndex)
+                throw new DuplicateNameException("This comptoir reference already exists !");
+            comptoirs[oldIndex] = newcommande;
             save();
         }
 
@@ -61,8 +61,8 @@ namespace GESCOM.DA
         public void add(COMPTOIR comptoir)
         {
             var index = comptoirs.IndexOf(comptoir);
-            //if (index >= 0)
-            //    throw new DuplicateNameException("This comptoir reference already exists !");
+            if (index >= 0)
+                throw new DuplicateNameException("This comptoir reference already exists !");
 
             comptoirs.Add(comptoir);
             save();
