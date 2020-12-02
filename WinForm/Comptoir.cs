@@ -59,7 +59,8 @@ namespace WinForm
         private void buttajout_Click(object sender, EventArgs e)
         {
             try
-            {   
+            {
+                checkForm();
                 COMPTOIR comptoir = new COMPTOIR
                    (
 
