@@ -10,21 +10,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using GESCOM.DA;
 
 
 namespace WinForm
 {
     public partial class Comptoir : Form
     {
-        private VENTEBLO venteBLO;
-        private Action callback;
+        public VENTEBLO venteBLO;
+
+              private Action callback;
         private VENTEBLO oldcommande;
         public Comptoir()
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
-            oldcommande = new VENTEBLO(ConfigurationManager.AppSettings["DbFolder"]);
+            venteBLO = new VENTEBLO(ConfigurationManager.AppSettings["dbfolder"]);
 
 
         }
@@ -57,7 +58,7 @@ namespace WinForm
         }
         private void loadata()
         {
-            
+
 
             string value = textsearch.Text.ToLower();
             var comptoirs = venteBLO.getby
@@ -166,7 +167,7 @@ namespace WinForm
             textTVA.Clear();
             //dateTimePicker2.Contain;
             textCODE.Focus();
-
+            loadata();
 
         }
         private void checkForm()
@@ -191,15 +192,7 @@ namespace WinForm
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            //string value = textsearch.Text.ToLower();
-            //var comptoirs = oldcommande.getby(
-               //   x =>
-                //  x.Code
-                       //      .Contains(value) //||
-                                              // x..Contains(value)
-
-
-               //   );
+           
             loadata();
         }
 
@@ -215,11 +208,55 @@ namespace WinForm
                 for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
                 {
 
+                    dataGridView1.SelectedRows[i].DataBoundItem as COMPTOIR;
+                   
+                    loadata();
 
-                    //  dataGridView1.SelectedRows[i].DataBoundItem as Comptoir,
-                    // loadata(comptoirs);
+                    // if (dataGridView1.SelectedRows.Count > 0)
+                    // {
+                    //for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                    // {
+                    // Form f = new FrmProductEdit
+                    //  (
+                    //  dataGridView1.SelectedRows[i].DataBoundItem as Product,
+                    //    loadData
+                    //  );
+                }    //   f.ShowDialog();
+            }
+        }
+
+        private void buttsup_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                if (
+                    MessageBox.Show
+                    (
+                        "Do you really want to delete this product(s)?",
+                        "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                    ) == DialogResult.Yes
+                )
+                {
+                    for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                    {
+                        venteBLO.DeleteCommande(dataGridView1.SelectedRows[i].DataBoundItem as COMPTOIR);
+                    }
+                    loadata();
                 }
             }
+        }
+
+        private void buttactu_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textsearch.Text))
+                loadata();
+            else
+                textsearch.Clear();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            buttmodif_Click(sender, e);
         }
     }
 }

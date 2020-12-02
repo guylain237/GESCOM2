@@ -14,6 +14,7 @@ namespace GESCOM.BLL
 {
     public class VENTEBLO
     {
+       
         VENTEDAL REPO;
         public VENTEBLO(string dbfolder)
         {
@@ -23,10 +24,10 @@ namespace GESCOM.BLL
         {
             REPO.add(comptoir);
         }
-        public void DeleteCommande(COMPTOIR comptoir)
-        {
-            REPO.remove(comptoir);
-        }
+      //  public void DeleteCommande(COMPTOIR comptoir)
+       // {
+         //   REPO.remove(comptoir);
+       // }
         public IEnumerable<COMPTOIR> getallcomptoir()
         {
             return REPO.find();
@@ -43,6 +44,24 @@ namespace GESCOM.BLL
         public void Editcommande(COMPTOIR oldcommande, COMPTOIR newcommande)
         {
             REPO.Set(oldcommande, newcommande);
+        }
+
+        public static implicit operator VENTEBLO(COMPTOIR v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Editcommande(VENTEBLO oldcommande, COMPTOIR newcommande)
+        {
+          //  throw new NotImplementedException();
+          
+        }
+
+       
+       
+        public void DeleteCommande(COMPTOIR comptoir)
+        {
+            REPO.remove(comptoir);
         }
     }
 }

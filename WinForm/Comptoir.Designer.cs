@@ -147,6 +147,7 @@ namespace WinForm
             this.buttactu.TabIndex = 41;
             this.buttactu.Text = " Actualiser";
             this.buttactu.UseVisualStyleBackColor = true;
+            this.buttactu.Click += new System.EventHandler(this.buttactu_Click);
             // 
             // buttimp
             // 
@@ -178,6 +179,7 @@ namespace WinForm
             this.buttsup.TabIndex = 39;
             this.buttsup.Text = "Supprimer";
             this.buttsup.UseVisualStyleBackColor = true;
+            this.buttsup.Click += new System.EventHandler(this.buttsup_Click);
             // 
             // buttmodif
             // 
@@ -340,6 +342,7 @@ namespace WinForm
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(716, 624);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // CODE
             // 
