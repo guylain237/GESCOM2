@@ -1,16 +1,15 @@
-﻿using System;
+﻿using GESCOM.BLL;
+using GESCOM.BO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GESCOM.BO;
-using GESCOM.DA;
-using GESCOM.BLL;
-using System.Configuration;
 
 
 
@@ -37,7 +36,9 @@ namespace WinForm
 
     private void Comptoir_Load(object sender, EventArgs e)
         {
-            //jèarrive pour te coder
+
+            loadata(comptoirBLO.getallcomptoir());
+
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -113,7 +114,7 @@ namespace WinForm
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+           // loadata(VENTEBLO.getallcomptoir());
         }
     }
 }
