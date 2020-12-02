@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using System.IO;
-//using GESCOM;
+using System.IO;
+using GESCOM;
 
 
 
@@ -42,7 +42,7 @@ namespace GESCOM.BLL
 
         public void Editcommande(COMPTOIR oldcommande, COMPTOIR newcommande)
         {
-            productRepo.Set(oldcommande, newcommande);
+            REPO.Set(oldcommande, newcommande);
         }
     }
 }

@@ -17,42 +17,59 @@ namespace WinForm
 {
     public partial class Comptoir : Form
     {
+        private VENTEBLO venteBLO;
         private Action callback;
-        private VENTEBLO comptoirBLO;
+        private VENTEBLO oldcommande;
         public Comptoir()
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
-            comptoirBLO = new VENTEBLO(ConfigurationManager.AppSettings["DbFolder"]);
-            
+            oldcommande = new VENTEBLO(ConfigurationManager.AppSettings["DbFolder"]);
 
-    }
+
+        }
         public Comptoir(Action callback) : this()
         {
             this.callback = callback;
-             
-    }
 
+        }
+        public Comptoir(COMPTOIR comptoir, Action callback) : this(callback)
+        {
+            this.oldcommande = comptoir;
+            textCODE.Text = comptoir.Code;
+            textDESIGNATION.Text = comptoir.Designation;
+            textQUANTITE.Text = comptoir.Quantite.ToString();
+            textPRIX.Text = comptoir.Prix.ToString();
+            textTVA.Text = comptoir.TVA.ToString();
+            textTOTAL.Text = comptoir.TOTAL.ToString();
+        }
 
-    private void Comptoir_Load(object sender, EventArgs e)
+        private void Comptoir_Load(object sender, EventArgs e)
         {
 
-            loadata(comptoirBLO.getallcomptoir());
+            loadata();
 
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-                   
+
         }
-        private void loadata(IEnumerable<COMPTOIR> comptoirs)
+        private void loadata()
         {
+            
+
+            string value = textsearch.Text.ToLower();
+            var comptoirs = venteBLO.getby
+            (
+                x =>
+                x.Code.ToLower().Contains(value) ||
+                x.Designation.ToLower().Contains(value)
+            ).OrderBy(x => x.Code).ToArray();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = comptoirs;
             count.Text = $"{dataGridView1.RowCount}rows";
             dataGridView1.ClearSelection();
-
-
 
         }
 
@@ -61,7 +78,7 @@ namespace WinForm
             try
             {
                 checkForm();
-                COMPTOIR comptoir = new COMPTOIR
+                COMPTOIR newcommande = new COMPTOIR
                    (
 
                     textCODE.Text,
@@ -81,12 +98,12 @@ namespace WinForm
 
 
 
-                VENTEBLO comptoirBLO = new VENTEBLO(ConfigurationManager.AppSettings["DbFolder"]);
+                VENTEBLO comptoirBLO = new VENTEBLO(ConfigurationManager.AppSettings["dbfolder"]);
 
                 if (this.oldcommande == null)
                     comptoirBLO.Commande(newcommande);
                 else
-                    comptoirBLO.Commande(oldcommande, newcommande);
+                    comptoirBLO.Editcommande(oldcommande, newcommande);
 
                 MessageBox.Show
                 (
@@ -139,7 +156,7 @@ namespace WinForm
                    MessageBoxIcon.Error
                );
             }
-if (callback != null)
+            if (callback != null)
                 callback();
             textCODE.Clear();
             textDESIGNATION.Clear();
@@ -174,21 +191,35 @@ if (callback != null)
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            string value = textsearch.Text.ToLower();
-            var comptoirs = comptoirBLO.getby(
-                  x =>
-                  x.Code
-                             .Contains(value) //||
-                 // x..Contains(value)
+            //string value = textsearch.Text.ToLower();
+            //var comptoirs = oldcommande.getby(
+               //   x =>
+                //  x.Code
+                       //      .Contains(value) //||
+                                              // x..Contains(value)
 
 
-                  );
-            loadata(comptoirs);
+               //   );
+            loadata();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-           // loadata(VENTEBLO.getallcomptoir());
+            // loadata(VENTEBLO.getallcomptoir());
+        }
+
+        private void buttmodif_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                {
+
+
+                    //  dataGridView1.SelectedRows[i].DataBoundItem as Comptoir,
+                    // loadata(comptoirs);
+                }
+            }
         }
     }
 }

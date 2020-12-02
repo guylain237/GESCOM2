@@ -50,9 +50,6 @@ namespace WinForm
             this.label3 = new System.Windows.Forms.Label();
             this.textsearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textDESIGNATION = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttajout = new System.Windows.Forms.Button();
             this.CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +57,9 @@ namespace WinForm
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textDESIGNATION = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttajout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -196,6 +196,7 @@ namespace WinForm
             this.buttmodif.TabIndex = 38;
             this.buttmodif.Text = "Modifier";
             this.buttmodif.UseVisualStyleBackColor = true;
+            this.buttmodif.Click += new System.EventHandler(this.buttmodif_Click);
             // 
             // textTOTAL
             // 
@@ -340,42 +341,6 @@ namespace WinForm
             this.dataGridView1.Size = new System.Drawing.Size(716, 624);
             this.dataGridView1.TabIndex = 8;
             // 
-            // textDESIGNATION
-            // 
-            this.textDESIGNATION.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDESIGNATION.Location = new System.Drawing.Point(20, 185);
-            this.textDESIGNATION.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textDESIGNATION.Name = "textDESIGNATION";
-            this.textDESIGNATION.Size = new System.Drawing.Size(271, 30);
-            this.textDESIGNATION.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 25);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "DESIGNATION";
-            // 
-            // buttajout
-            // 
-            this.buttajout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttajout.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.buttajout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttajout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttajout.ForeColor = System.Drawing.Color.Lime;
-            this.buttajout.Image = global::WinForm.Properties.Resources.n;
-            this.buttajout.Location = new System.Drawing.Point(20, 682);
-            this.buttajout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttajout.Name = "buttajout";
-            this.buttajout.Size = new System.Drawing.Size(144, 36);
-            this.buttajout.TabIndex = 7;
-            this.buttajout.Text = "Ajouter";
-            this.buttajout.UseVisualStyleBackColor = true;
-            this.buttajout.Click += new System.EventHandler(this.buttajout_Click);
-            // 
             // CODE
             // 
             this.CODE.DataPropertyName = "Code";
@@ -424,6 +389,42 @@ namespace WinForm
             this.Column6.HeaderText = "DATE";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            // 
+            // textDESIGNATION
+            // 
+            this.textDESIGNATION.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDESIGNATION.Location = new System.Drawing.Point(20, 185);
+            this.textDESIGNATION.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textDESIGNATION.Name = "textDESIGNATION";
+            this.textDESIGNATION.Size = new System.Drawing.Size(271, 30);
+            this.textDESIGNATION.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "DESIGNATION";
+            // 
+            // buttajout
+            // 
+            this.buttajout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttajout.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttajout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttajout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttajout.ForeColor = System.Drawing.Color.Lime;
+            this.buttajout.Image = global::WinForm.Properties.Resources.n;
+            this.buttajout.Location = new System.Drawing.Point(20, 682);
+            this.buttajout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttajout.Name = "buttajout";
+            this.buttajout.Size = new System.Drawing.Size(144, 36);
+            this.buttajout.TabIndex = 7;
+            this.buttajout.Text = "Ajouter";
+            this.buttajout.UseVisualStyleBackColor = true;
+            this.buttajout.Click += new System.EventHandler(this.buttajout_Click);
             // 
             // Comptoir
             // 
