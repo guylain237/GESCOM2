@@ -208,7 +208,7 @@ namespace WinForm
                 for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
                 {
 
-                    dataGridView1.SelectedRows[i].DataBoundItem as COMPTOIR;
+                   // dataGridView1.SelectedRows[i].DataBoundItem as COMPTOIR;
                    
                     loadata();
 

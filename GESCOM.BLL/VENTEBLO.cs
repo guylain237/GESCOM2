@@ -40,6 +40,11 @@ namespace GESCOM.BLL
         {
             return REPO.find(predicate);
         }
+        
+             public IEnumerable<COMPTOIR> getbys(Func<COMPTOIR, bool> predicate)
+        {
+            return REPO.find(predicate);
+        }
 
         public void Editcommande(COMPTOIR oldcommande, COMPTOIR newcommande)
         {
