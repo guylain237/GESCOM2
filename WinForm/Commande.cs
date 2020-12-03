@@ -38,6 +38,7 @@ namespace WinForm
                     )
                 );
 
+
             this.reportViewer1.RefreshReport();
         }
     }
