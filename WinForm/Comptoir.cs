@@ -2,15 +2,11 @@
 using GESCOM.BO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using GESCOM.DA;
 
 
 namespace WinForm
@@ -257,6 +253,36 @@ namespace WinForm
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             buttmodif_Click(sender, e);
+        }
+
+        private void buttimp_Click(object sender, EventArgs e)
+        {
+            List<Impression> items = new List<Impression>();
+            for(int i=0; i<dataGridView1.Rows.Count; i++)
+            {
+                COMPTOIR p = dataGridView1.Rows[i].DataBoundItem as COMPTOIR;
+                items.Add
+                    (
+                    new Impression(
+                    p.Code,
+                    p.Designation,
+                    p.Prix,
+                    p.TVA,
+                    p.TOTAL)
+                   // loadata
+                
+
+                    );
+                             
+                   
+            }
+            Form f = new Commande("impression.rdlc", items);
+            f.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

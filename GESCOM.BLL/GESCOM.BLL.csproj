@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AchatBLO.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="TypingException.cs" />
     <Compile Include="VENTEBLO.cs" />

@@ -70,11 +70,18 @@ namespace WinForm
             this.btnVente = new System.Windows.Forms.Button();
             this.panellogo = new System.Windows.Forms.Panel();
             this.panelChilForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.documentDeVenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentDachatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentDeStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panelGest.SuspendLayout();
             this.panelArticle.SuspendLayout();
             this.panelAchat.SuspendLayout();
             this.panelVente.SuspendLayout();
+            this.panelChilForm.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -90,7 +97,7 @@ namespace WinForm
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1152, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1198, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -112,44 +119,44 @@ namespace WinForm
             // 
             this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
             this.nouveauToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nouveauToolStripMenuItem.Text = "Nouveau";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(201, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // ouvrirToolStripMenuItem
             // 
             this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
             this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ouvrirToolStripMenuItem.Text = "Ouvrir";
             // 
             // fermeToolStripMenuItem
             // 
             this.fermeToolStripMenuItem.Name = "fermeToolStripMenuItem";
             this.fermeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.fermeToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.fermeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fermeToolStripMenuItem.Text = "Ferme";
             // 
             // importerToolStripMenuItem
             // 
             this.importerToolStripMenuItem.Name = "importerToolStripMenuItem";
-            this.importerToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.importerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.importerToolStripMenuItem.Text = "Importer";
             // 
             // miseEnPageToolStripMenuItem
             // 
             this.miseEnPageToolStripMenuItem.Name = "miseEnPageToolStripMenuItem";
-            this.miseEnPageToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.miseEnPageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.miseEnPageToolStripMenuItem.Text = "Mise en page";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(201, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
             // 
             // editionToolStripMenuItem
             // 
@@ -227,6 +234,10 @@ namespace WinForm
             // 
             // structureToolStripMenuItem
             // 
+            this.structureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.documentDeVenteToolStripMenuItem,
+            this.documentDachatToolStripMenuItem,
+            this.documentDeStockToolStripMenuItem});
             this.structureToolStripMenuItem.Name = "structureToolStripMenuItem";
             this.structureToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.structureToolStripMenuItem.Text = "Structure";
@@ -264,7 +275,7 @@ namespace WinForm
             this.panelGest.Location = new System.Drawing.Point(0, 28);
             this.panelGest.Margin = new System.Windows.Forms.Padding(2);
             this.panelGest.Name = "panelGest";
-            this.panelGest.Size = new System.Drawing.Size(158, 528);
+            this.panelGest.Size = new System.Drawing.Size(331, 561);
             this.panelGest.TabIndex = 2;
             // 
             // panelArticle
@@ -275,10 +286,10 @@ namespace WinForm
             this.panelArticle.Controls.Add(this.button9);
             this.panelArticle.Controls.Add(this.button8);
             this.panelArticle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelArticle.Location = new System.Drawing.Point(0, 453);
+            this.panelArticle.Location = new System.Drawing.Point(0, 939);
             this.panelArticle.Margin = new System.Windows.Forms.Padding(2);
             this.panelArticle.Name = "panelArticle";
-            this.panelArticle.Size = new System.Drawing.Size(137, 115);
+            this.panelArticle.Size = new System.Drawing.Size(310, 214);
             this.panelArticle.TabIndex = 8;
             // 
             // button10
@@ -287,12 +298,13 @@ namespace WinForm
             this.button10.Dock = System.Windows.Forms.DockStyle.Top;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 72);
+            this.button10.Location = new System.Drawing.Point(0, 140);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(137, 41);
+            this.button10.Size = new System.Drawing.Size(310, 70);
             this.button10.TabIndex = 2;
             this.button10.Text = "button10";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -304,12 +316,13 @@ namespace WinForm
             this.button9.Dock = System.Windows.Forms.DockStyle.Top;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 38);
+            this.button9.Location = new System.Drawing.Point(0, 70);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(137, 34);
+            this.button9.Size = new System.Drawing.Size(310, 70);
             this.button9.TabIndex = 1;
             this.button9.Text = "button9";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -321,12 +334,13 @@ namespace WinForm
             this.button8.Dock = System.Windows.Forms.DockStyle.Top;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(137, 38);
+            this.button8.Size = new System.Drawing.Size(310, 70);
             this.button8.TabIndex = 0;
             this.button8.Text = "button8";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -337,12 +351,13 @@ namespace WinForm
             this.btnArticle.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnArticle.FlatAppearance.BorderSize = 0;
             this.btnArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticle.ForeColor = System.Drawing.Color.White;
-            this.btnArticle.Location = new System.Drawing.Point(0, 418);
+            this.btnArticle.Location = new System.Drawing.Point(0, 839);
             this.btnArticle.Margin = new System.Windows.Forms.Padding(2);
             this.btnArticle.Name = "btnArticle";
             this.btnArticle.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnArticle.Size = new System.Drawing.Size(137, 35);
+            this.btnArticle.Size = new System.Drawing.Size(310, 100);
             this.btnArticle.TabIndex = 10;
             this.btnArticle.Text = "Gestion des Articles et Stocks";
             this.btnArticle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -355,10 +370,10 @@ namespace WinForm
             this.panelAchat.Controls.Add(this.button5);
             this.panelAchat.Controls.Add(this.button4);
             this.panelAchat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAchat.Location = new System.Drawing.Point(0, 303);
+            this.panelAchat.Location = new System.Drawing.Point(0, 625);
             this.panelAchat.Margin = new System.Windows.Forms.Padding(2);
             this.panelAchat.Name = "panelAchat";
-            this.panelAchat.Size = new System.Drawing.Size(137, 115);
+            this.panelAchat.Size = new System.Drawing.Size(310, 214);
             this.panelAchat.TabIndex = 9;
             // 
             // button6
@@ -367,12 +382,13 @@ namespace WinForm
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 76);
+            this.button6.Location = new System.Drawing.Point(0, 140);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(137, 38);
+            this.button6.Size = new System.Drawing.Size(310, 70);
             this.button6.TabIndex = 6;
             this.button6.Text = "button6";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,16 +400,18 @@ namespace WinForm
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 38);
+            this.button5.Location = new System.Drawing.Point(0, 70);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(137, 38);
+            this.button5.Size = new System.Drawing.Size(310, 70);
             this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
+            this.button5.Text = "Saisir un achat";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button4
             // 
@@ -401,14 +419,15 @@ namespace WinForm
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(0, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(137, 38);
+            this.button4.Size = new System.Drawing.Size(310, 70);
             this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
+            this.button4.Text = "Historique des achats";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
@@ -418,12 +437,13 @@ namespace WinForm
             this.btnAchat.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAchat.FlatAppearance.BorderSize = 0;
             this.btnAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAchat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAchat.ForeColor = System.Drawing.Color.White;
-            this.btnAchat.Location = new System.Drawing.Point(0, 268);
+            this.btnAchat.Location = new System.Drawing.Point(0, 525);
             this.btnAchat.Margin = new System.Windows.Forms.Padding(2);
             this.btnAchat.Name = "btnAchat";
             this.btnAchat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnAchat.Size = new System.Drawing.Size(137, 35);
+            this.btnAchat.Size = new System.Drawing.Size(310, 100);
             this.btnAchat.TabIndex = 7;
             this.btnAchat.Text = "Gestion des Achats";
             this.btnAchat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,10 +456,10 @@ namespace WinForm
             this.panelVente.Controls.Add(this.buttCOMPTOIR);
             this.panelVente.Controls.Add(this.btnHistorique);
             this.panelVente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVente.Location = new System.Drawing.Point(0, 153);
+            this.panelVente.Location = new System.Drawing.Point(0, 311);
             this.panelVente.Margin = new System.Windows.Forms.Padding(2);
             this.panelVente.Name = "panelVente";
-            this.panelVente.Size = new System.Drawing.Size(137, 115);
+            this.panelVente.Size = new System.Drawing.Size(310, 214);
             this.panelVente.TabIndex = 6;
             // 
             // button3
@@ -448,12 +468,13 @@ namespace WinForm
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 76);
+            this.button3.Location = new System.Drawing.Point(0, 140);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(137, 38);
+            this.button3.Size = new System.Drawing.Size(310, 70);
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -465,12 +486,13 @@ namespace WinForm
             this.buttCOMPTOIR.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttCOMPTOIR.FlatAppearance.BorderSize = 0;
             this.buttCOMPTOIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttCOMPTOIR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttCOMPTOIR.ForeColor = System.Drawing.Color.White;
-            this.buttCOMPTOIR.Location = new System.Drawing.Point(0, 38);
+            this.buttCOMPTOIR.Location = new System.Drawing.Point(0, 70);
             this.buttCOMPTOIR.Margin = new System.Windows.Forms.Padding(2);
             this.buttCOMPTOIR.Name = "buttCOMPTOIR";
             this.buttCOMPTOIR.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.buttCOMPTOIR.Size = new System.Drawing.Size(137, 38);
+            this.buttCOMPTOIR.Size = new System.Drawing.Size(310, 70);
             this.buttCOMPTOIR.TabIndex = 1;
             this.buttCOMPTOIR.Text = "Comptoir";
             this.buttCOMPTOIR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -483,12 +505,13 @@ namespace WinForm
             this.btnHistorique.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistorique.FlatAppearance.BorderSize = 0;
             this.btnHistorique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorique.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorique.ForeColor = System.Drawing.Color.White;
             this.btnHistorique.Location = new System.Drawing.Point(0, 0);
             this.btnHistorique.Margin = new System.Windows.Forms.Padding(2);
             this.btnHistorique.Name = "btnHistorique";
             this.btnHistorique.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.btnHistorique.Size = new System.Drawing.Size(137, 38);
+            this.btnHistorique.Size = new System.Drawing.Size(310, 70);
             this.btnHistorique.TabIndex = 0;
             this.btnHistorique.Text = "Historique";
             this.btnHistorique.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -500,12 +523,13 @@ namespace WinForm
             this.btnVente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVente.FlatAppearance.BorderSize = 0;
             this.btnVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVente.ForeColor = System.Drawing.Color.White;
-            this.btnVente.Location = new System.Drawing.Point(0, 118);
+            this.btnVente.Location = new System.Drawing.Point(0, 211);
             this.btnVente.Margin = new System.Windows.Forms.Padding(2);
             this.btnVente.Name = "btnVente";
             this.btnVente.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnVente.Size = new System.Drawing.Size(137, 35);
+            this.btnVente.Size = new System.Drawing.Size(310, 100);
             this.btnVente.TabIndex = 5;
             this.btnVente.Text = "Gestion des Ventes";
             this.btnVente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -520,26 +544,63 @@ namespace WinForm
             this.panellogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(137, 118);
+            this.panellogo.Size = new System.Drawing.Size(310, 211);
             this.panellogo.TabIndex = 0;
             // 
             // panelChilForm
             // 
             this.panelChilForm.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panelChilForm.BackgroundImage = global::WinForm.Properties.Resources.logo;
+            this.panelChilForm.Controls.Add(this.panel1);
             this.panelChilForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChilForm.Location = new System.Drawing.Point(158, 28);
+            this.panelChilForm.Location = new System.Drawing.Point(331, 28);
             this.panelChilForm.Margin = new System.Windows.Forms.Padding(2);
             this.panelChilForm.Name = "panelChilForm";
-            this.panelChilForm.Size = new System.Drawing.Size(994, 528);
+            this.panelChilForm.Size = new System.Drawing.Size(867, 561);
             this.panelChilForm.TabIndex = 3;
             this.panelChilForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChilForm_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 498);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(867, 63);
+            this.panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(838, 42);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "projet de gestion commercial realise en 2020";
+            // 
+            // documentDeVenteToolStripMenuItem
+            // 
+            this.documentDeVenteToolStripMenuItem.Name = "documentDeVenteToolStripMenuItem";
+            this.documentDeVenteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.documentDeVenteToolStripMenuItem.Text = "Document de vente";
+            // 
+            // documentDachatToolStripMenuItem
+            // 
+            this.documentDachatToolStripMenuItem.Name = "documentDachatToolStripMenuItem";
+            this.documentDachatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.documentDachatToolStripMenuItem.Text = "Document d\'achat";
+            // 
+            // documentDeStockToolStripMenuItem
+            // 
+            this.documentDeStockToolStripMenuItem.Name = "documentDeStockToolStripMenuItem";
+            this.documentDeStockToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.documentDeStockToolStripMenuItem.Text = "Document de stock";
             // 
             // Parent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 556);
+            this.ClientSize = new System.Drawing.Size(1198, 589);
             this.Controls.Add(this.panelChilForm);
             this.Controls.Add(this.panelGest);
             this.Controls.Add(this.menuStrip1);
@@ -549,12 +610,16 @@ namespace WinForm
             this.Name = "Parent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gestion commercial";
+            this.Load += new System.EventHandler(this.Parent_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelGest.ResumeLayout(false);
             this.panelArticle.ResumeLayout(false);
             this.panelAchat.ResumeLayout(false);
             this.panelVente.ResumeLayout(false);
+            this.panelChilForm.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -603,6 +668,11 @@ namespace WinForm
         private System.Windows.Forms.Button btnHistorique;
         private System.Windows.Forms.Button btnVente;
         private System.Windows.Forms.Panel panellogo;
+        private System.Windows.Forms.ToolStripMenuItem documentDeVenteToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem documentDachatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem documentDeStockToolStripMenuItem;
     }
 }
 

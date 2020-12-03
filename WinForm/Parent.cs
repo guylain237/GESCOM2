@@ -158,5 +158,16 @@ namespace WinForm
             openChildForm(new Historique());
             hideSubmenu();
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+           /* openChildForm(new Achat());
+            hideSubmenu(); */
+        }
+
+        private void Parent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

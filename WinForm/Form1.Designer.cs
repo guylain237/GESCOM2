@@ -29,99 +29,181 @@ namespace WinForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnModifier = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSupprimer = new System.Windows.Forms.Button();
+            this.btnActualiser = new System.Windows.Forms.Button();
+            this.btnImprimer = new System.Windows.Forms.Button();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nfacture = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fournisseur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Montant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // btnModifier
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 76);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(427, 355);
-            this.listBox1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(460, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 74);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(460, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 74);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(460, 265);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 74);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(460, 357);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(207, 74);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifier.Location = new System.Drawing.Point(949, 74);
+            this.btnModifier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(186, 78);
+            this.btnModifier.TabIndex = 1;
+            this.btnModifier.Text = "MODIFIER";
+            this.btnModifier.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 12);
+            this.button5.Location = new System.Drawing.Point(16, 15);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(34, 25);
+            this.button5.Size = new System.Drawing.Size(45, 31);
             this.button5.TabIndex = 5;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Code,
+            this.Nfacture,
+            this.Designation,
+            this.Fournisseur,
+            this.Montant,
+            this.Date,
+            this.Quantite});
+            this.dataGridView1.Location = new System.Drawing.Point(16, 71);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(925, 617);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // btnSupprimer
+            // 
+            this.btnSupprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupprimer.Location = new System.Drawing.Point(949, 197);
+            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSupprimer.Name = "btnSupprimer";
+            this.btnSupprimer.Size = new System.Drawing.Size(186, 78);
+            this.btnSupprimer.TabIndex = 7;
+            this.btnSupprimer.Text = "SUPPRIMER";
+            this.btnSupprimer.UseVisualStyleBackColor = true;
+            // 
+            // btnActualiser
+            // 
+            this.btnActualiser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualiser.Location = new System.Drawing.Point(949, 328);
+            this.btnActualiser.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualiser.Name = "btnActualiser";
+            this.btnActualiser.Size = new System.Drawing.Size(186, 78);
+            this.btnActualiser.TabIndex = 8;
+            this.btnActualiser.Text = "ACTUALISER";
+            this.btnActualiser.UseVisualStyleBackColor = true;
+            // 
+            // btnImprimer
+            // 
+            this.btnImprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimer.Location = new System.Drawing.Point(949, 474);
+            this.btnImprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImprimer.Name = "btnImprimer";
+            this.btnImprimer.Size = new System.Drawing.Size(186, 78);
+            this.btnImprimer.TabIndex = 9;
+            this.btnImprimer.Text = "IMPRIMER";
+            this.btnImprimer.UseVisualStyleBackColor = true;
+            // 
+            // Code
+            // 
+            this.Code.HeaderText = "CODE";
+            this.Code.MinimumWidth = 6;
+            this.Code.Name = "Code";
+            this.Code.Width = 125;
+            // 
+            // Nfacture
+            // 
+            this.Nfacture.HeaderText = "N FACTURE";
+            this.Nfacture.MinimumWidth = 6;
+            this.Nfacture.Name = "Nfacture";
+            this.Nfacture.Width = 125;
+            // 
+            // Designation
+            // 
+            this.Designation.HeaderText = "DESIGNATION";
+            this.Designation.MinimumWidth = 6;
+            this.Designation.Name = "Designation";
+            this.Designation.Width = 125;
+            // 
+            // Fournisseur
+            // 
+            this.Fournisseur.HeaderText = "FOURNISSEUR";
+            this.Fournisseur.MinimumWidth = 6;
+            this.Fournisseur.Name = "Fournisseur";
+            this.Fournisseur.Width = 125;
+            // 
+            // Montant
+            // 
+            this.Montant.HeaderText = "MONTANT";
+            this.Montant.MinimumWidth = 6;
+            this.Montant.Name = "Montant";
+            this.Montant.Width = 125;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "DATE";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.Width = 125;
+            // 
+            // Quantite
+            // 
+            this.Quantite.HeaderText = "QUANTITE";
+            this.Quantite.MinimumWidth = 6;
+            this.Quantite.Name = "Quantite";
+            this.Quantite.Width = 125;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 450);
+            this.ClientSize = new System.Drawing.Size(1148, 716);
+            this.Controls.Add(this.btnImprimer);
+            this.Controls.Add(this.btnActualiser);
+            this.Controls.Add(this.btnSupprimer);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnModifier);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnSupprimer;
+        private System.Windows.Forms.Button btnActualiser;
+        private System.Windows.Forms.Button btnImprimer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nfacture;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fournisseur;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Montant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantite;
     }
 }
