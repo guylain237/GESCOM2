@@ -49,6 +49,9 @@ namespace WinForm
             this.effacerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.structureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentDeVenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentDachatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentDeStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.traitementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.etatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,9 +75,7 @@ namespace WinForm
             this.panelChilForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.documentDeVenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.documentDachatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.documentDeStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.butsortir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelGest.SuspendLayout();
             this.panelArticle.SuspendLayout();
@@ -97,7 +98,7 @@ namespace WinForm
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1198, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1198, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -112,51 +113,51 @@ namespace WinForm
             this.miseEnPageToolStripMenuItem,
             this.toolStripSeparator3});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // nouveauToolStripMenuItem
             // 
             this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
             this.nouveauToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.nouveauToolStripMenuItem.Text = "Nouveau";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(201, 6);
             // 
             // ouvrirToolStripMenuItem
             // 
             this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
             this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.ouvrirToolStripMenuItem.Text = "Ouvrir";
             // 
             // fermeToolStripMenuItem
             // 
             this.fermeToolStripMenuItem.Name = "fermeToolStripMenuItem";
             this.fermeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.fermeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fermeToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.fermeToolStripMenuItem.Text = "Ferme";
             // 
             // importerToolStripMenuItem
             // 
             this.importerToolStripMenuItem.Name = "importerToolStripMenuItem";
-            this.importerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.importerToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.importerToolStripMenuItem.Text = "Importer";
             // 
             // miseEnPageToolStripMenuItem
             // 
             this.miseEnPageToolStripMenuItem.Name = "miseEnPageToolStripMenuItem";
-            this.miseEnPageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.miseEnPageToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.miseEnPageToolStripMenuItem.Text = "Mise en page";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(201, 6);
             // 
             // editionToolStripMenuItem
             // 
@@ -171,7 +172,7 @@ namespace WinForm
             this.effacerToolStripMenuItem,
             this.ajouterToolStripMenuItem});
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
-            this.editionToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.editionToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.editionToolStripMenuItem.Text = "Edition";
             // 
             // annulerToolStripMenuItem
@@ -239,25 +240,43 @@ namespace WinForm
             this.documentDachatToolStripMenuItem,
             this.documentDeStockToolStripMenuItem});
             this.structureToolStripMenuItem.Name = "structureToolStripMenuItem";
-            this.structureToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.structureToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.structureToolStripMenuItem.Text = "Structure";
+            // 
+            // documentDeVenteToolStripMenuItem
+            // 
+            this.documentDeVenteToolStripMenuItem.Name = "documentDeVenteToolStripMenuItem";
+            this.documentDeVenteToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.documentDeVenteToolStripMenuItem.Text = "Document de vente";
+            // 
+            // documentDachatToolStripMenuItem
+            // 
+            this.documentDachatToolStripMenuItem.Name = "documentDachatToolStripMenuItem";
+            this.documentDachatToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.documentDachatToolStripMenuItem.Text = "Document d\'achat";
+            // 
+            // documentDeStockToolStripMenuItem
+            // 
+            this.documentDeStockToolStripMenuItem.Name = "documentDeStockToolStripMenuItem";
+            this.documentDeStockToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.documentDeStockToolStripMenuItem.Text = "Document de stock";
             // 
             // traitementToolStripMenuItem
             // 
             this.traitementToolStripMenuItem.Name = "traitementToolStripMenuItem";
-            this.traitementToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.traitementToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
             this.traitementToolStripMenuItem.Text = "Traitement";
             // 
             // etatToolStripMenuItem
             // 
             this.etatToolStripMenuItem.Name = "etatToolStripMenuItem";
-            this.etatToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.etatToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
             this.etatToolStripMenuItem.Text = "Etat";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(30, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(30, 26);
             this.toolStripMenuItem1.Text = "?";
             // 
             // panelGest
@@ -272,16 +291,17 @@ namespace WinForm
             this.panelGest.Controls.Add(this.btnVente);
             this.panelGest.Controls.Add(this.panellogo);
             this.panelGest.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelGest.Location = new System.Drawing.Point(0, 28);
+            this.panelGest.Location = new System.Drawing.Point(0, 30);
             this.panelGest.Margin = new System.Windows.Forms.Padding(2);
             this.panelGest.Name = "panelGest";
-            this.panelGest.Size = new System.Drawing.Size(331, 561);
+            this.panelGest.Size = new System.Drawing.Size(331, 559);
             this.panelGest.TabIndex = 2;
             // 
             // panelArticle
             // 
             this.panelArticle.BackColor = System.Drawing.Color.Teal;
             this.panelArticle.BackgroundImage = global::WinForm.Properties.Resources.logo;
+            this.panelArticle.Controls.Add(this.butsortir);
             this.panelArticle.Controls.Add(this.button10);
             this.panelArticle.Controls.Add(this.button9);
             this.panelArticle.Controls.Add(this.button8);
@@ -300,11 +320,11 @@ namespace WinForm
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 140);
+            this.button10.Location = new System.Drawing.Point(0, 121);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(310, 70);
+            this.button10.Size = new System.Drawing.Size(310, 60);
             this.button10.TabIndex = 2;
             this.button10.Text = "button10";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -318,11 +338,11 @@ namespace WinForm
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 70);
+            this.button9.Location = new System.Drawing.Point(0, 63);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(310, 70);
+            this.button9.Size = new System.Drawing.Size(310, 58);
             this.button9.TabIndex = 1;
             this.button9.Text = "button9";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -340,7 +360,7 @@ namespace WinForm
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(310, 70);
+            this.button8.Size = new System.Drawing.Size(310, 63);
             this.button8.TabIndex = 0;
             this.button8.Text = "button8";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -553,10 +573,10 @@ namespace WinForm
             this.panelChilForm.BackgroundImage = global::WinForm.Properties.Resources.logo;
             this.panelChilForm.Controls.Add(this.panel1);
             this.panelChilForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChilForm.Location = new System.Drawing.Point(331, 28);
+            this.panelChilForm.Location = new System.Drawing.Point(331, 30);
             this.panelChilForm.Margin = new System.Windows.Forms.Padding(2);
             this.panelChilForm.Name = "panelChilForm";
-            this.panelChilForm.Size = new System.Drawing.Size(867, 561);
+            this.panelChilForm.Size = new System.Drawing.Size(867, 559);
             this.panelChilForm.TabIndex = 3;
             this.panelChilForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChilForm_Paint);
             // 
@@ -574,27 +594,22 @@ namespace WinForm
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(838, 42);
+            this.label1.Size = new System.Drawing.Size(818, 40);
             this.label1.TabIndex = 5;
             this.label1.Text = "projet de gestion commercial realise en 2020";
             // 
-            // documentDeVenteToolStripMenuItem
+            // butsortir
             // 
-            this.documentDeVenteToolStripMenuItem.Name = "documentDeVenteToolStripMenuItem";
-            this.documentDeVenteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.documentDeVenteToolStripMenuItem.Text = "Document de vente";
-            // 
-            // documentDachatToolStripMenuItem
-            // 
-            this.documentDachatToolStripMenuItem.Name = "documentDachatToolStripMenuItem";
-            this.documentDachatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.documentDachatToolStripMenuItem.Text = "Document d\'achat";
-            // 
-            // documentDeStockToolStripMenuItem
-            // 
-            this.documentDeStockToolStripMenuItem.Name = "documentDeStockToolStripMenuItem";
-            this.documentDeStockToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.documentDeStockToolStripMenuItem.Text = "Document de stock";
+            this.butsortir.BackColor = System.Drawing.Color.Red;
+            this.butsortir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butsortir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.butsortir.Location = new System.Drawing.Point(0, 165);
+            this.butsortir.Name = "butsortir";
+            this.butsortir.Size = new System.Drawing.Size(310, 49);
+            this.butsortir.TabIndex = 5;
+            this.butsortir.Text = "Sortir";
+            this.butsortir.UseVisualStyleBackColor = false;
+            this.butsortir.Click += new System.EventHandler(this.butsortir_Click);
             // 
             // Parent
             // 
@@ -673,6 +688,7 @@ namespace WinForm
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem documentDachatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentDeStockToolStripMenuItem;
+        private System.Windows.Forms.Button butsortir;
     }
 }
 

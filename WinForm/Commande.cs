@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GESCOM;
+
 
 namespace WinForm
 {
@@ -31,12 +31,15 @@ namespace WinForm
             this.reportViewer1.LocalReport.ReportPath = "Impression.rdlc";
             this.reportViewer1.LocalReport.DataSources.Add(
                 new Microsoft.Reporting.WinForms.ReportDataSource(
-              "dataset1",
+              "DataSet1",
               items
 
 
                     )
                 );
+            this.reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent;
+            this.reportViewer1.ZoomPercent = 100;
 
 
             this.reportViewer1.RefreshReport();

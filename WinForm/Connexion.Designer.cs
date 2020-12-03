@@ -39,8 +39,8 @@ namespace WinForm
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.butok = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,7 @@ namespace WinForm
             this.button3.TabIndex = 20;
             this.button3.Text = "Quitter";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
@@ -173,15 +174,6 @@ namespace WinForm
             this.panel1.Size = new System.Drawing.Size(908, 126);
             this.panel1.TabIndex = 21;
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::WinForm.Properties.Resources.logo;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(270, 126);
-            this.panel2.TabIndex = 22;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -193,6 +185,15 @@ namespace WinForm
             this.label3.Size = new System.Drawing.Size(344, 76);
             this.label3.TabIndex = 7;
             this.label3.Text = "CONFIDENTIELLES \r\n\r\n";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::WinForm.Properties.Resources.logo;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(270, 126);
+            this.panel2.TabIndex = 22;
             // 
             // Connexion
             // 

@@ -169,5 +169,10 @@ namespace WinForm
         {
 
         }
+
+        private void butsortir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
