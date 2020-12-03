@@ -269,6 +269,8 @@ namespace WinForm
             // 
             // panelArticle
             // 
+            this.panelArticle.BackColor = System.Drawing.Color.Teal;
+            this.panelArticle.BackgroundImage = global::WinForm.Properties.Resources.logo;
             this.panelArticle.Controls.Add(this.button10);
             this.panelArticle.Controls.Add(this.button9);
             this.panelArticle.Controls.Add(this.button8);
@@ -286,11 +288,11 @@ namespace WinForm
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 76);
+            this.button10.Location = new System.Drawing.Point(0, 72);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(137, 38);
+            this.button10.Size = new System.Drawing.Size(137, 41);
             this.button10.TabIndex = 2;
             this.button10.Text = "button10";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -307,7 +309,7 @@ namespace WinForm
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(137, 38);
+            this.button9.Size = new System.Drawing.Size(137, 34);
             this.button9.TabIndex = 1;
             this.button9.Text = "button9";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -513,6 +515,8 @@ namespace WinForm
             // panellogo
             // 
             this.panellogo.BackColor = System.Drawing.Color.Red;
+            this.panellogo.BackgroundImage = global::WinForm.Properties.Resources.logo;
+            this.panellogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panellogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Name = "panellogo";
@@ -522,6 +526,7 @@ namespace WinForm
             // panelChilForm
             // 
             this.panelChilForm.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelChilForm.BackgroundImage = global::WinForm.Properties.Resources.logo;
             this.panelChilForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChilForm.Location = new System.Drawing.Point(158, 28);
             this.panelChilForm.Margin = new System.Windows.Forms.Padding(2);

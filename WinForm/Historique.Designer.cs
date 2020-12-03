@@ -29,7 +29,7 @@ namespace WinForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textsearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,9 +42,9 @@ namespace WinForm
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.butactu2 = new System.Windows.Forms.Button();
             this.count = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.butactu2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,12 +95,12 @@ namespace WinForm
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Lime;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Lime;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -172,20 +172,6 @@ namespace WinForm
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
-            // butactu2
-            // 
-            this.butactu2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butactu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butactu2.ForeColor = System.Drawing.Color.Yellow;
-            this.butactu2.Image = global::WinForm.Properties.Resources.actu;
-            this.butactu2.Location = new System.Drawing.Point(919, 155);
-            this.butactu2.Name = "butactu2";
-            this.butactu2.Size = new System.Drawing.Size(183, 35);
-            this.butactu2.TabIndex = 10;
-            this.butactu2.Text = "Actualiser";
-            this.butactu2.UseVisualStyleBackColor = true;
-            this.butactu2.Click += new System.EventHandler(this.butactu2_Click);
-            // 
             // count
             // 
             this.count.AutoSize = true;
@@ -213,10 +199,26 @@ namespace WinForm
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // butactu2
+            // 
+            this.butactu2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butactu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butactu2.ForeColor = System.Drawing.Color.Yellow;
+            this.butactu2.Image = global::WinForm.Properties.Resources.actu;
+            this.butactu2.Location = new System.Drawing.Point(919, 155);
+            this.butactu2.Name = "butactu2";
+            this.butactu2.Size = new System.Drawing.Size(183, 35);
+            this.butactu2.TabIndex = 10;
+            this.butactu2.Text = "Actualiser";
+            this.butactu2.UseVisualStyleBackColor = true;
+            this.butactu2.Click += new System.EventHandler(this.butactu2_Click);
+            // 
             // Historique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WinForm.Properties.Resources.aaaaa;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1101, 549);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.count);

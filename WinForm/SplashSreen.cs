@@ -36,7 +36,7 @@ namespace WinForm
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Enabled = false;
-            Parent principal = new Parent();
+            Connexion principal = new Connexion();
             principal.Show();
             this.Close();
         }
