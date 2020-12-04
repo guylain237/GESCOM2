@@ -116,12 +116,19 @@
     <Compile Include="FrmEditAchat.Designer.cs">
       <DependentUpon>FrmEditAchat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrint.Designer.cs">
+      <DependentUpon>FrmPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Historique.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Historique.Designer.cs">
       <DependentUpon>Historique.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImpAchat.cs" />
     <Compile Include="Impression.cs" />
     <Compile Include="Parent.cs">
       <SubType>Form</SubType>
@@ -153,11 +160,17 @@
     <EmbeddedResource Include="FrmEditAchat.resx">
       <DependentUpon>FrmEditAchat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrint.resx">
+      <DependentUpon>FrmPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Historique.resx">
       <DependentUpon>Historique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parent.resx">
       <DependentUpon>Parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRINT.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -188,6 +201,7 @@
     <None Include="Properties\DataSources\GESCOM.BO.Achat.datasource" />
     <None Include="Properties\DataSources\GESCOM.BO.COMPTOIR.datasource" />
     <None Include="Properties\DataSources\Historique.datasource" />
+    <None Include="Properties\DataSources\ImpAchat.datasource" />
     <None Include="Properties\DataSources\Impression.datasource" />
     <None Include="Properties\DataSources\Parent.datasource" />
     <None Include="Properties\DataSources\Print1.datasource" />

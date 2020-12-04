@@ -28,8 +28,8 @@ namespace WinForm
 
         private void Commande_Load(object sender, EventArgs e) 
         {
-            this.reportViewer1.LocalReport.ReportPath = "Impression.rdlc";
-            this.reportViewer1.LocalReport.DataSources.Add(
+            this.reportViewerVente.LocalReport.ReportPath = "Impression.rdlc";
+            this.reportViewerVente.LocalReport.DataSources.Add(
                 new Microsoft.Reporting.WinForms.ReportDataSource(
               "DataSet1",
               items
@@ -37,12 +37,12 @@ namespace WinForm
 
                     )
                 );
-            this.reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
-            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent;
-            this.reportViewer1.ZoomPercent = 70;
+            this.reportViewerVente.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
+            this.reportViewerVente.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent;
+            this.reportViewerVente.ZoomPercent = 70;
 
 
-            this.reportViewer1.RefreshReport();
+            this.reportViewerVente.RefreshReport();
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

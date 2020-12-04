@@ -31,35 +31,35 @@ namespace WinForm
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.COMPTOIRBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewerVente = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.COMPTOIRBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.COMPTOIRBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WinForm.Impression.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(956, 554);
-            this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // COMPTOIRBindingSource
             // 
             this.COMPTOIRBindingSource.DataSource = typeof(GESCOM.BO.COMPTOIR);
+            // 
+            // reportViewerVente
+            // 
+            this.reportViewerVente.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.COMPTOIRBindingSource;
+            this.reportViewerVente.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewerVente.LocalReport.ReportEmbeddedResource = "WinForm.Impression.rdlc";
+            this.reportViewerVente.Location = new System.Drawing.Point(0, 0);
+            this.reportViewerVente.Name = "reportViewerVente";
+            this.reportViewerVente.ServerReport.BearerToken = null;
+            this.reportViewerVente.Size = new System.Drawing.Size(956, 554);
+            this.reportViewerVente.TabIndex = 0;
+            this.reportViewerVente.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // Commande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 554);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.reportViewerVente);
             this.Name = "Commande";
             this.Text = "Commande";
             this.Load += new System.EventHandler(this.Commande_Load);
@@ -70,7 +70,7 @@ namespace WinForm
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerVente;
         private System.Windows.Forms.BindingSource COMPTOIRBindingSource;
     }
 }

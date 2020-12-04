@@ -111,5 +111,35 @@ namespace WinForm
             FrmAchat n = new FrmAchat();
             n.Show();
         }
+
+        private void btnImprimer_Click(object sender, EventArgs e)
+        {
+            List<ImpAchat> items = new List<ImpAchat>();
+            for (int i = 0; i < dataGridViewa.Rows.Count; i++)
+            {
+                Achat A = dataGridViewa.Rows[i].DataBoundItem as Achat;
+                items.Add
+                    (
+                    new ImpAchat
+                    (
+                    A.Code,
+                    A.Designation,
+                    A.Quantite,
+                  
+                    A.Fournisseur,
+
+                    A.Nfacture
+                    )
+
+
+
+                    );
+
+
+
+            }
+            Form f = new FrmPrint("PRINT.rdlc", items);
+            f.Show();
+        }
     }
 }

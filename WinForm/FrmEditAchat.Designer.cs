@@ -127,6 +127,7 @@ namespace WinForm
             this.btnImprimer.TabIndex = 9;
             this.btnImprimer.Text = "IMPRIMER";
             this.btnImprimer.UseVisualStyleBackColor = true;
+            this.btnImprimer.Click += new System.EventHandler(this.btnImprimer_Click);
             // 
             // txtsearch
             // 
