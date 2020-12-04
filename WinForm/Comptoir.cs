@@ -260,23 +260,28 @@ namespace WinForm
             List<Impression> items = new List<Impression>();
             for(int i=0; i<dataGridView1.Rows.Count; i++)
             {
-                COMPTOIR p = dataGridView1.Rows[i].DataBoundItem as COMPTOIR;
+               COMPTOIR p = dataGridView1.Rows[i].DataBoundItem as COMPTOIR;
                 items.Add
                     (
-                    new Impression(
+                    new Impression
+                    (
                     p.Code,
                     p.Designation,
-                    p.Prix,
+                    p.Quantite,
+                  p.Prix,
                     p.TVA,
-                    p.TOTAL)
-                   // loadata
+                     
+                    p.TOTAL
+                    )
+                
                 
 
                     );
+           
                              
                    
             }
-            Form f = new Commande("impression.rdlc", items);
+            Form f = new Commande("Impression.rdlc", items);
             f.Show();
         }
 

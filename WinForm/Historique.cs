@@ -12,7 +12,7 @@ using GESCOM.BLL;
 
 using GESCOM.BO;
 
-using GESCOM.DA;
+//using GESCOM.DA;
 using System.Configuration;
 
 namespace WinForm
@@ -91,6 +91,6 @@ namespace WinForm
                     loadata();
                 }
             }
-            }
+        }
     }
 }

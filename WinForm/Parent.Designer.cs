@@ -57,6 +57,7 @@ namespace WinForm
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panelGest = new System.Windows.Forms.Panel();
             this.panelArticle = new System.Windows.Forms.Panel();
+            this.butsortir = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -75,7 +76,6 @@ namespace WinForm
             this.panelChilForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.butsortir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelGest.SuspendLayout();
             this.panelArticle.SuspendLayout();
@@ -98,7 +98,7 @@ namespace WinForm
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1198, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1198, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -113,7 +113,7 @@ namespace WinForm
             this.miseEnPageToolStripMenuItem,
             this.toolStripSeparator3});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // nouveauToolStripMenuItem
@@ -172,7 +172,7 @@ namespace WinForm
             this.effacerToolStripMenuItem,
             this.ajouterToolStripMenuItem});
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
-            this.editionToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
+            this.editionToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.editionToolStripMenuItem.Text = "Edition";
             // 
             // annulerToolStripMenuItem
@@ -240,7 +240,7 @@ namespace WinForm
             this.documentDachatToolStripMenuItem,
             this.documentDeStockToolStripMenuItem});
             this.structureToolStripMenuItem.Name = "structureToolStripMenuItem";
-            this.structureToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
+            this.structureToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.structureToolStripMenuItem.Text = "Structure";
             // 
             // documentDeVenteToolStripMenuItem
@@ -264,19 +264,19 @@ namespace WinForm
             // traitementToolStripMenuItem
             // 
             this.traitementToolStripMenuItem.Name = "traitementToolStripMenuItem";
-            this.traitementToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.traitementToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.traitementToolStripMenuItem.Text = "Traitement";
             // 
             // etatToolStripMenuItem
             // 
             this.etatToolStripMenuItem.Name = "etatToolStripMenuItem";
-            this.etatToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.etatToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.etatToolStripMenuItem.Text = "Etat";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(30, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(30, 24);
             this.toolStripMenuItem1.Text = "?";
             // 
             // panelGest
@@ -291,10 +291,10 @@ namespace WinForm
             this.panelGest.Controls.Add(this.btnVente);
             this.panelGest.Controls.Add(this.panellogo);
             this.panelGest.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelGest.Location = new System.Drawing.Point(0, 30);
+            this.panelGest.Location = new System.Drawing.Point(0, 28);
             this.panelGest.Margin = new System.Windows.Forms.Padding(2);
             this.panelGest.Name = "panelGest";
-            this.panelGest.Size = new System.Drawing.Size(331, 559);
+            this.panelGest.Size = new System.Drawing.Size(331, 561);
             this.panelGest.TabIndex = 2;
             // 
             // panelArticle
@@ -306,11 +306,24 @@ namespace WinForm
             this.panelArticle.Controls.Add(this.button9);
             this.panelArticle.Controls.Add(this.button8);
             this.panelArticle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelArticle.Location = new System.Drawing.Point(0, 939);
+            this.panelArticle.Location = new System.Drawing.Point(0, 935);
             this.panelArticle.Margin = new System.Windows.Forms.Padding(2);
             this.panelArticle.Name = "panelArticle";
             this.panelArticle.Size = new System.Drawing.Size(310, 214);
             this.panelArticle.TabIndex = 8;
+            // 
+            // butsortir
+            // 
+            this.butsortir.BackColor = System.Drawing.Color.Red;
+            this.butsortir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butsortir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.butsortir.Location = new System.Drawing.Point(0, 165);
+            this.butsortir.Name = "butsortir";
+            this.butsortir.Size = new System.Drawing.Size(310, 49);
+            this.butsortir.TabIndex = 5;
+            this.butsortir.Text = "Sortir";
+            this.butsortir.UseVisualStyleBackColor = false;
+            this.butsortir.Click += new System.EventHandler(this.butsortir_Click);
             // 
             // button10
             // 
@@ -377,7 +390,7 @@ namespace WinForm
             this.btnArticle.Margin = new System.Windows.Forms.Padding(2);
             this.btnArticle.Name = "btnArticle";
             this.btnArticle.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnArticle.Size = new System.Drawing.Size(310, 100);
+            this.btnArticle.Size = new System.Drawing.Size(310, 96);
             this.btnArticle.TabIndex = 10;
             this.btnArticle.Text = "Gestion des Articles et Stocks";
             this.btnArticle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -413,6 +426,7 @@ namespace WinForm
             this.button6.Text = "button6";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -571,18 +585,20 @@ namespace WinForm
             // 
             this.panelChilForm.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panelChilForm.BackgroundImage = global::WinForm.Properties.Resources.logo;
+            this.panelChilForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelChilForm.Controls.Add(this.panel1);
             this.panelChilForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChilForm.Location = new System.Drawing.Point(331, 30);
+            this.panelChilForm.Location = new System.Drawing.Point(331, 28);
             this.panelChilForm.Margin = new System.Windows.Forms.Padding(2);
             this.panelChilForm.Name = "panelChilForm";
-            this.panelChilForm.Size = new System.Drawing.Size(867, 559);
+            this.panelChilForm.Size = new System.Drawing.Size(867, 561);
             this.panelChilForm.TabIndex = 3;
             this.panelChilForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChilForm_Paint);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 498);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(867, 63);
@@ -591,25 +607,14 @@ namespace WinForm
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 12);
+            this.label1.Location = new System.Drawing.Point(0, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(818, 40);
             this.label1.TabIndex = 5;
             this.label1.Text = "projet de gestion commercial realise en 2020";
-            // 
-            // butsortir
-            // 
-            this.butsortir.BackColor = System.Drawing.Color.Red;
-            this.butsortir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butsortir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.butsortir.Location = new System.Drawing.Point(0, 165);
-            this.butsortir.Name = "butsortir";
-            this.butsortir.Size = new System.Drawing.Size(310, 49);
-            this.butsortir.TabIndex = 5;
-            this.butsortir.Text = "Sortir";
-            this.butsortir.UseVisualStyleBackColor = false;
-            this.butsortir.Click += new System.EventHandler(this.butsortir_Click);
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Parent
             // 

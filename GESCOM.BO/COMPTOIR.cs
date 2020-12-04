@@ -31,6 +31,8 @@ namespace GESCOM.BO
             TOTAL = tataux;
             //Date = date;
         }
+
+      
         public override bool Equals(object obj)
         {
             return obj is COMPTOIR comptoir &&

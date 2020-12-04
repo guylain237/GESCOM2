@@ -1,7 +1,7 @@
 ﻿
 namespace WinForm
 {
-    partial class Achat
+    partial class FrmAchat
     {
         /// <summary>
         /// Required designer variable.
@@ -44,6 +44,7 @@ namespace WinForm
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCode
@@ -185,13 +186,25 @@ namespace WinForm
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Achat
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.Blue;
+            this.button2.Location = new System.Drawing.Point(514, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 34);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Explorer";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // FrmAchat
             // 
             this.AcceptButton = this.btnEnregistrer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnAnnuler;
-            this.ClientSize = new System.Drawing.Size(639, 741);
+            this.ClientSize = new System.Drawing.Size(648, 707);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnEnregistrer);
@@ -209,8 +222,9 @@ namespace WinForm
             this.Controls.Add(this.lblCode);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "Achat";
+            this.Name = "FrmAchat";
             this.Text = "Achat";
+            this.Load += new System.EventHandler(this.Achat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +247,6 @@ namespace WinForm
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

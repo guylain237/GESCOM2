@@ -31,14 +31,10 @@ namespace WinForm
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.COMPTOIRBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.COMPTOIRBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.COMPTOIRBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // COMPTOIRBindingSource
-            // 
-            this.COMPTOIRBindingSource.DataSource = typeof(GESCOM.BO.COMPTOIR);
             // 
             // reportViewer1
             // 
@@ -52,6 +48,11 @@ namespace WinForm
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(956, 554);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // COMPTOIRBindingSource
+            // 
+            this.COMPTOIRBindingSource.DataSource = typeof(GESCOM.BO.COMPTOIR);
             // 
             // Commande
             // 

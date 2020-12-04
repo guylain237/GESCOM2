@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GESCOM.BLL;
+using GESCOM.BO;
 
 namespace WinForm
 {
@@ -46,7 +48,7 @@ namespace WinForm
                 Gest.Visible = false;
         }
 
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -65,11 +67,11 @@ namespace WinForm
             hideSubmenu();
         }
 
-        
+
 
         private void button4_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form1());
+            openChildForm(new FrmAchat());
             hideSubmenu();
         }
 
@@ -128,10 +130,9 @@ namespace WinForm
             hideSubmenu();
         }
 
-       
         private void button4_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new Form1());
+            openChildForm(new FrmAchat());
             hideSubmenu();
         }
 
@@ -161,8 +162,8 @@ namespace WinForm
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-           /* openChildForm(new Achat());
-            hideSubmenu(); */
+            openChildForm(new FrmAchat());
+            hideSubmenu();
         }
 
         private void Parent_Load(object sender, EventArgs e)
@@ -173,6 +174,16 @@ namespace WinForm
         private void butsortir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

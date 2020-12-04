@@ -173,10 +173,10 @@ namespace WinForm
             this.buttimp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttimp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttimp.Location = new System.Drawing.Point(483, 431);
+            this.buttimp.Location = new System.Drawing.Point(577, 442);
             this.buttimp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttimp.Name = "buttimp";
-            this.buttimp.Size = new System.Drawing.Size(239, 194);
+            this.buttimp.Size = new System.Drawing.Size(168, 147);
             this.buttimp.TabIndex = 40;
             this.buttimp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttimp.UseVisualStyleBackColor = true;

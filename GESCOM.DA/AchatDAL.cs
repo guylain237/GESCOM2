@@ -21,9 +21,12 @@ namespace GESCOM.DA
         private readonly string dbfolder;
         private FileInfo file;
 
-        public AchatDAL()
+        public AchatDAL(string dbfolder)
         {
-            file = new FileInfo(FILE_NAME);
+            this.dbfolder = dbfolder;
+            file = new FileInfo(Path.Combine(this.dbfolder, FILE_NAME));
+
+    
             if (!file.Directory.Exists)
             {
                 file.Directory.Create();
@@ -46,12 +49,32 @@ namespace GESCOM.DA
                 achats = new List<Achat>();
             }
         }
-        public void Add(Achat achat)
+        public void Set(Achat oldachat, Achat newachat)
         {
-            achats.Add(achat);
+            var oldIndex = achats.IndexOf(oldachat);
+            var newIndex = achats.IndexOf(newachat);
+            if (oldIndex < 0)
+                throw new KeyNotFoundException("L'ACHAT N'EXISTE PAS !");
+            if (newIndex >= 0 && oldIndex != newIndex)
+                throw new DuplicateNameException("Le code de produit existe deja !");
+            achats[oldIndex] = newachat;
             Save();
         }
 
+        public IEnumerable<Achat> Find()
+        {
+            return new List<Achat>(achats);
+        }
+
+        public void Add(Achat achat)
+        {
+            var index = achats.IndexOf(achat);
+            if (index >= 0)
+                throw new DuplicateNameException("Le code de produit existe deja !");
+            achats.Add(achat);
+            Save();
+
+        }
         private void Save()
         {
             using (StreamWriter sw = new StreamWriter(file.FullName, false))
@@ -67,9 +90,9 @@ namespace GESCOM.DA
             Save();
         }
 
-        public IEnumerable<Achat> Find()
+        public IEnumerable<Achat> Find(Func<Achat, bool> predicate)
         {
-            return new List<Achat>( achats );
+            return new List<Achat>( achats.Where(predicate).ToArray() );
         }
     }
 }

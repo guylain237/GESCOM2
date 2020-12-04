@@ -86,11 +86,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Achat.cs">
+    <Compile Include="FrmAchat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Achat.Designer.cs">
-      <DependentUpon>Achat.cs</DependentUpon>
+    <Compile Include="FrmAchat.Designer.cs">
+      <DependentUpon>FrmAchat.cs</DependentUpon>
     </Compile>
     <Compile Include="Commande.cs">
       <SubType>Form</SubType>
@@ -110,11 +110,11 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmEditAchat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmEditAchat.Designer.cs">
+      <DependentUpon>FrmEditAchat.cs</DependentUpon>
     </Compile>
     <Compile Include="Historique.cs">
       <SubType>Form</SubType>
@@ -138,8 +138,8 @@
       <DependentUpon>SplashSreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="Achat.resx">
-      <DependentUpon>Achat.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAchat.resx">
+      <DependentUpon>FrmAchat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Commande.resx">
       <DependentUpon>Commande.cs</DependentUpon>
@@ -150,8 +150,8 @@
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEditAchat.resx">
+      <DependentUpon>FrmEditAchat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Historique.resx">
       <DependentUpon>Historique.cs</DependentUpon>
@@ -171,10 +171,14 @@
     </Compile>
     <EmbeddedResource Include="Impression.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CustomToolNamespace>COMPTOIRS</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashSreen.resx">
       <DependentUpon>SplashSreen.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Achat.datasource" />
     <None Include="Properties\DataSources\Commande.datasource" />
@@ -237,10 +241,6 @@
     <ProjectReference Include="..\GESCOM.BO\GESCOM.BO.csproj">
       <Project>{f986a851-900e-4ffb-8ab8-a7d0a0a26209}</Project>
       <Name>GESCOM.BO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GESCOM.DA\GESCOM.DA.csproj">
-      <Project>{80442f13-1a95-4bc8-9c27-bc1233fbd0dc}</Project>
-      <Name>GESCOM.DA</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

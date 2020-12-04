@@ -20,11 +20,13 @@ namespace WinForm
         }
 
        
-
-        public Impression(string code, string designation, double prix, float tVA, double tOTAL)
+ 
+      
+        public Impression(string code, string designation, int quantite, double prix, float tVA, double tOTAL)
         {
             Code = code;
             Designation = designation;
+            Quantite = quantite;
             Prix = prix;
             TVA = tVA;
             TOTAL = tOTAL;
