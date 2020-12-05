@@ -51,23 +51,21 @@ namespace WinForm
             this.label3 = new System.Windows.Forms.Label();
             this.textsearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textDESIGNATION = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttajout = new System.Windows.Forms.Button();
             this.CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textDESIGNATION = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttajout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::WinForm.Properties.Resources.images;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.count);
@@ -137,6 +135,7 @@ namespace WinForm
             this.dateTimePicker2.ShowCheckBox = true;
             this.dateTimePicker2.Size = new System.Drawing.Size(356, 30);
             this.dateTimePicker2.TabIndex = 44;
+            this.dateTimePicker2.Visible = false;
             // 
             // label8
             // 
@@ -147,15 +146,16 @@ namespace WinForm
             this.label8.Size = new System.Drawing.Size(66, 25);
             this.label8.TabIndex = 42;
             this.label8.Text = "DATE";
+            this.label8.Visible = false;
             // 
             // buttactu
             // 
             this.buttactu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttactu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.buttactu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttactu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttactu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttactu.ForeColor = System.Drawing.Color.Yellow;
-            this.buttactu.Image = global::WinForm.Properties.Resources.actu;
             this.buttactu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttactu.Location = new System.Drawing.Point(611, 682);
             this.buttactu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -163,7 +163,7 @@ namespace WinForm
             this.buttactu.Size = new System.Drawing.Size(156, 36);
             this.buttactu.TabIndex = 41;
             this.buttactu.Text = " Actualiser";
-            this.buttactu.UseVisualStyleBackColor = true;
+            this.buttactu.UseVisualStyleBackColor = false;
             this.buttactu.Click += new System.EventHandler(this.buttactu_Click);
             // 
             // buttimp
@@ -173,10 +173,10 @@ namespace WinForm
             this.buttimp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttimp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttimp.Location = new System.Drawing.Point(577, 442);
+            this.buttimp.Location = new System.Drawing.Point(611, 476);
             this.buttimp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttimp.Name = "buttimp";
-            this.buttimp.Size = new System.Drawing.Size(168, 147);
+            this.buttimp.Size = new System.Drawing.Size(101, 86);
             this.buttimp.TabIndex = 40;
             this.buttimp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttimp.UseVisualStyleBackColor = true;
@@ -185,18 +185,18 @@ namespace WinForm
             // buttsup
             // 
             this.buttsup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttsup.BackColor = System.Drawing.Color.Purple;
             this.buttsup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttsup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttsup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttsup.ForeColor = System.Drawing.Color.Red;
-            this.buttsup.Image = global::WinForm.Properties.Resources.s;
             this.buttsup.Location = new System.Drawing.Point(399, 681);
             this.buttsup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttsup.Name = "buttsup";
             this.buttsup.Size = new System.Drawing.Size(164, 36);
             this.buttsup.TabIndex = 39;
             this.buttsup.Text = "Supprimer";
-            this.buttsup.UseVisualStyleBackColor = true;
+            this.buttsup.UseVisualStyleBackColor = false;
             this.buttsup.Click += new System.EventHandler(this.buttsup_Click);
             // 
             // buttmodif
@@ -207,7 +207,6 @@ namespace WinForm
             this.buttmodif.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttmodif.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttmodif.ForeColor = System.Drawing.Color.Magenta;
-            this.buttmodif.Image = global::WinForm.Properties.Resources.m;
             this.buttmodif.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttmodif.Location = new System.Drawing.Point(212, 681);
             this.buttmodif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -351,8 +350,7 @@ namespace WinForm
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6});
+            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(796, 72);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -362,16 +360,51 @@ namespace WinForm
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // textDESIGNATION
+            // 
+            this.textDESIGNATION.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDESIGNATION.Location = new System.Drawing.Point(20, 185);
+            this.textDESIGNATION.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textDESIGNATION.Name = "textDESIGNATION";
+            this.textDESIGNATION.Size = new System.Drawing.Size(271, 30);
+            this.textDESIGNATION.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "DESIGNATION";
+            // 
+            // buttajout
+            // 
+            this.buttajout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttajout.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttajout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttajout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttajout.ForeColor = System.Drawing.Color.Lime;
+            this.buttajout.Location = new System.Drawing.Point(20, 682);
+            this.buttajout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttajout.Name = "buttajout";
+            this.buttajout.Size = new System.Drawing.Size(144, 36);
+            this.buttajout.TabIndex = 7;
+            this.buttajout.Text = "Ajouter";
+            this.buttajout.UseVisualStyleBackColor = true;
+            this.buttajout.Click += new System.EventHandler(this.buttajout_Click);
+            // 
             // CODE
             // 
-            this.CODE.DataPropertyName = "Code";
+            this.CODE.DataPropertyName = "Designation";
             this.CODE.HeaderText = "CODE";
             this.CODE.MinimumWidth = 6;
             this.CODE.Name = "CODE";
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "Designation";
+            this.Column1.DataPropertyName = "Code";
             this.Column1.HeaderText = "DESIGNATION";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -403,49 +436,6 @@ namespace WinForm
             this.Column5.HeaderText = "TOTAL A PAYER";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Date";
-            this.Column6.HeaderText = "DATE";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // textDESIGNATION
-            // 
-            this.textDESIGNATION.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDESIGNATION.Location = new System.Drawing.Point(20, 185);
-            this.textDESIGNATION.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textDESIGNATION.Name = "textDESIGNATION";
-            this.textDESIGNATION.Size = new System.Drawing.Size(271, 30);
-            this.textDESIGNATION.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 25);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "DESIGNATION";
-            // 
-            // buttajout
-            // 
-            this.buttajout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttajout.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.buttajout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttajout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttajout.ForeColor = System.Drawing.Color.Lime;
-            this.buttajout.Image = global::WinForm.Properties.Resources.n;
-            this.buttajout.Location = new System.Drawing.Point(20, 682);
-            this.buttajout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttajout.Name = "buttajout";
-            this.buttajout.Size = new System.Drawing.Size(144, 36);
-            this.buttajout.TabIndex = 7;
-            this.buttajout.Text = "Ajouter";
-            this.buttajout.UseVisualStyleBackColor = true;
-            this.buttajout.Click += new System.EventHandler(this.buttajout_Click);
             // 
             // Comptoir
             // 
@@ -492,13 +482,12 @@ namespace WinForm
         private System.Windows.Forms.Button buttajout;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label count;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -29,6 +29,7 @@ namespace WinForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Parent));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,6 +77,26 @@ namespace WinForm
             this.panelChilForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saisieDinventaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miseAJourDeLagentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miseAJourDeLaComptabiliteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.archivageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.familleArticleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.articleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nommenclatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fournisseursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baremeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ressourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fournisseurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panelGest.SuspendLayout();
             this.panelArticle.SuspendLayout();
@@ -109,55 +130,58 @@ namespace WinForm
             this.toolStripSeparator1,
             this.ouvrirToolStripMenuItem,
             this.fermeToolStripMenuItem,
+            this.toolStripSeparator3,
             this.importerToolStripMenuItem,
-            this.miseEnPageToolStripMenuItem,
-            this.toolStripSeparator3});
+            this.miseEnPageToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // nouveauToolStripMenuItem
             // 
+            this.nouveauToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientToolStripMenuItem,
+            this.fournisseurToolStripMenuItem});
             this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
             this.nouveauToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nouveauToolStripMenuItem.Text = "Nouveau";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(201, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // ouvrirToolStripMenuItem
             // 
             this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
             this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ouvrirToolStripMenuItem.Text = "Ouvrir";
             // 
             // fermeToolStripMenuItem
             // 
             this.fermeToolStripMenuItem.Name = "fermeToolStripMenuItem";
             this.fermeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.fermeToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.fermeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fermeToolStripMenuItem.Text = "Ferme";
             // 
             // importerToolStripMenuItem
             // 
             this.importerToolStripMenuItem.Name = "importerToolStripMenuItem";
-            this.importerToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.importerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.importerToolStripMenuItem.Text = "Importer";
             // 
             // miseEnPageToolStripMenuItem
             // 
             this.miseEnPageToolStripMenuItem.Name = "miseEnPageToolStripMenuItem";
-            this.miseEnPageToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.miseEnPageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.miseEnPageToolStripMenuItem.Text = "Mise en page";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(201, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
             // 
             // editionToolStripMenuItem
             // 
@@ -238,7 +262,13 @@ namespace WinForm
             this.structureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.documentDeVenteToolStripMenuItem,
             this.documentDachatToolStripMenuItem,
-            this.documentDeStockToolStripMenuItem});
+            this.documentDeStockToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.saisieDinventaireToolStripMenuItem,
+            this.miseAJourDeLagentToolStripMenuItem,
+            this.miseAJourDeLaComptabiliteToolStripMenuItem,
+            this.toolStripSeparator6,
+            this.archivageToolStripMenuItem});
             this.structureToolStripMenuItem.Name = "structureToolStripMenuItem";
             this.structureToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.structureToolStripMenuItem.Text = "Structure";
@@ -246,23 +276,34 @@ namespace WinForm
             // documentDeVenteToolStripMenuItem
             // 
             this.documentDeVenteToolStripMenuItem.Name = "documentDeVenteToolStripMenuItem";
-            this.documentDeVenteToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.documentDeVenteToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.documentDeVenteToolStripMenuItem.Text = "Document de vente";
             // 
             // documentDachatToolStripMenuItem
             // 
             this.documentDachatToolStripMenuItem.Name = "documentDachatToolStripMenuItem";
-            this.documentDachatToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.documentDachatToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.documentDachatToolStripMenuItem.Text = "Document d\'achat";
             // 
             // documentDeStockToolStripMenuItem
             // 
             this.documentDeStockToolStripMenuItem.Name = "documentDeStockToolStripMenuItem";
-            this.documentDeStockToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.documentDeStockToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.documentDeStockToolStripMenuItem.Text = "Document de stock";
             // 
             // traitementToolStripMenuItem
             // 
+            this.traitementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.familleArticleToolStripMenuItem,
+            this.articleToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.nommenclatureToolStripMenuItem,
+            this.toolStripSeparator8,
+            this.clientsToolStripMenuItem,
+            this.fournisseursToolStripMenuItem,
+            this.toolStripSeparator9,
+            this.baremeToolStripMenuItem,
+            this.ressourceToolStripMenuItem});
             this.traitementToolStripMenuItem.Name = "traitementToolStripMenuItem";
             this.traitementToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.traitementToolStripMenuItem.Text = "Traitement";
@@ -275,6 +316,9 @@ namespace WinForm
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aideToolStripMenuItem,
+            this.aProposToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(30, 24);
             this.toolStripMenuItem1.Text = "?";
@@ -306,7 +350,7 @@ namespace WinForm
             this.panelArticle.Controls.Add(this.button9);
             this.panelArticle.Controls.Add(this.button8);
             this.panelArticle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelArticle.Location = new System.Drawing.Point(0, 935);
+            this.panelArticle.Location = new System.Drawing.Point(0, 943);
             this.panelArticle.Margin = new System.Windows.Forms.Padding(2);
             this.panelArticle.Name = "panelArticle";
             this.panelArticle.Size = new System.Drawing.Size(310, 214);
@@ -386,7 +430,8 @@ namespace WinForm
             this.btnArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticle.ForeColor = System.Drawing.Color.White;
-            this.btnArticle.Location = new System.Drawing.Point(0, 839);
+            this.btnArticle.Image = ((System.Drawing.Image)(resources.GetObject("btnArticle.Image")));
+            this.btnArticle.Location = new System.Drawing.Point(0, 847);
             this.btnArticle.Margin = new System.Windows.Forms.Padding(2);
             this.btnArticle.Name = "btnArticle";
             this.btnArticle.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -394,6 +439,7 @@ namespace WinForm
             this.btnArticle.TabIndex = 10;
             this.btnArticle.Text = "Gestion des Articles et Stocks";
             this.btnArticle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnArticle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnArticle.UseVisualStyleBackColor = true;
             this.btnArticle.Click += new System.EventHandler(this.btnArticle_Click_1);
             // 
@@ -403,7 +449,7 @@ namespace WinForm
             this.panelAchat.Controls.Add(this.button5);
             this.panelAchat.Controls.Add(this.button4);
             this.panelAchat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAchat.Location = new System.Drawing.Point(0, 625);
+            this.panelAchat.Location = new System.Drawing.Point(0, 633);
             this.panelAchat.Margin = new System.Windows.Forms.Padding(2);
             this.panelAchat.Name = "panelAchat";
             this.panelAchat.Size = new System.Drawing.Size(310, 214);
@@ -423,7 +469,7 @@ namespace WinForm
             this.button6.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(310, 70);
             this.button6.TabIndex = 6;
-            this.button6.Text = "button6";
+            this.button6.Text = "FACTURE";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
@@ -473,7 +519,8 @@ namespace WinForm
             this.btnAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAchat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAchat.ForeColor = System.Drawing.Color.White;
-            this.btnAchat.Location = new System.Drawing.Point(0, 525);
+            this.btnAchat.Image = ((System.Drawing.Image)(resources.GetObject("btnAchat.Image")));
+            this.btnAchat.Location = new System.Drawing.Point(0, 533);
             this.btnAchat.Margin = new System.Windows.Forms.Padding(2);
             this.btnAchat.Name = "btnAchat";
             this.btnAchat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -481,6 +528,7 @@ namespace WinForm
             this.btnAchat.TabIndex = 7;
             this.btnAchat.Text = "Gestion des Achats";
             this.btnAchat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAchat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAchat.UseVisualStyleBackColor = true;
             this.btnAchat.Click += new System.EventHandler(this.btnAchat_Click_1);
             // 
@@ -490,7 +538,7 @@ namespace WinForm
             this.panelVente.Controls.Add(this.buttCOMPTOIR);
             this.panelVente.Controls.Add(this.btnHistorique);
             this.panelVente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVente.Location = new System.Drawing.Point(0, 311);
+            this.panelVente.Location = new System.Drawing.Point(0, 319);
             this.panelVente.Margin = new System.Windows.Forms.Padding(2);
             this.panelVente.Name = "panelVente";
             this.panelVente.Size = new System.Drawing.Size(310, 214);
@@ -510,7 +558,7 @@ namespace WinForm
             this.button3.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(310, 70);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "FACTURE";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
@@ -528,7 +576,7 @@ namespace WinForm
             this.buttCOMPTOIR.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.buttCOMPTOIR.Size = new System.Drawing.Size(310, 70);
             this.buttCOMPTOIR.TabIndex = 1;
-            this.buttCOMPTOIR.Text = "Comptoir";
+            this.buttCOMPTOIR.Text = "COMPTOIRE";
             this.buttCOMPTOIR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttCOMPTOIR.UseVisualStyleBackColor = false;
             this.buttCOMPTOIR.Click += new System.EventHandler(this.buttCOMPTOIR_Click);
@@ -547,7 +595,7 @@ namespace WinForm
             this.btnHistorique.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.btnHistorique.Size = new System.Drawing.Size(310, 70);
             this.btnHistorique.TabIndex = 0;
-            this.btnHistorique.Text = "Historique";
+            this.btnHistorique.Text = "HISTORIQUE";
             this.btnHistorique.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistorique.UseVisualStyleBackColor = false;
             this.btnHistorique.Click += new System.EventHandler(this.btnHistorique_Click);
@@ -559,14 +607,16 @@ namespace WinForm
             this.btnVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVente.ForeColor = System.Drawing.Color.White;
+            this.btnVente.Image = ((System.Drawing.Image)(resources.GetObject("btnVente.Image")));
             this.btnVente.Location = new System.Drawing.Point(0, 211);
             this.btnVente.Margin = new System.Windows.Forms.Padding(2);
             this.btnVente.Name = "btnVente";
             this.btnVente.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnVente.Size = new System.Drawing.Size(310, 100);
+            this.btnVente.Size = new System.Drawing.Size(310, 108);
             this.btnVente.TabIndex = 5;
             this.btnVente.Text = "Gestion des Ventes";
             this.btnVente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVente.UseVisualStyleBackColor = true;
             this.btnVente.Click += new System.EventHandler(this.btnVente_Click);
             // 
@@ -599,22 +649,137 @@ namespace WinForm
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 498);
+            this.panel1.Location = new System.Drawing.Point(0, 507);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(867, 63);
+            this.panel1.Size = new System.Drawing.Size(867, 54);
             this.panel1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 23);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(818, 40);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "projet de gestion commercial realise en 2020";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(758, 39);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "presentation du projet de gestion commerciale";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // aideToolStripMenuItem
+            // 
+            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aideToolStripMenuItem.Text = "Aide";
+            // 
+            // aProposToolStripMenuItem
+            // 
+            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aProposToolStripMenuItem.Text = "A propos";
+            // 
+            // saisieDinventaireToolStripMenuItem
+            // 
+            this.saisieDinventaireToolStripMenuItem.Name = "saisieDinventaireToolStripMenuItem";
+            this.saisieDinventaireToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.saisieDinventaireToolStripMenuItem.Text = "Saisie d\'inventaire";
+            // 
+            // miseAJourDeLagentToolStripMenuItem
+            // 
+            this.miseAJourDeLagentToolStripMenuItem.Name = "miseAJourDeLagentToolStripMenuItem";
+            this.miseAJourDeLagentToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.miseAJourDeLagentToolStripMenuItem.Text = "mise a jour de l\'agent";
+            // 
+            // miseAJourDeLaComptabiliteToolStripMenuItem
+            // 
+            this.miseAJourDeLaComptabiliteToolStripMenuItem.Name = "miseAJourDeLaComptabiliteToolStripMenuItem";
+            this.miseAJourDeLaComptabiliteToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.miseAJourDeLaComptabiliteToolStripMenuItem.Text = "mise a jour de la comptabilite";
+            // 
+            // archivageToolStripMenuItem
+            // 
+            this.archivageToolStripMenuItem.Name = "archivageToolStripMenuItem";
+            this.archivageToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.archivageToolStripMenuItem.Text = "Archivage";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(288, 6);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(288, 6);
+            // 
+            // familleArticleToolStripMenuItem
+            // 
+            this.familleArticleToolStripMenuItem.Name = "familleArticleToolStripMenuItem";
+            this.familleArticleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.familleArticleToolStripMenuItem.Text = "Famille Article";
+            // 
+            // articleToolStripMenuItem
+            // 
+            this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
+            this.articleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.articleToolStripMenuItem.Text = "Article";
+            // 
+            // nommenclatureToolStripMenuItem
+            // 
+            this.nommenclatureToolStripMenuItem.Name = "nommenclatureToolStripMenuItem";
+            this.nommenclatureToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nommenclatureToolStripMenuItem.Text = "Nommenclature";
+            // 
+            // clientsToolStripMenuItem
+            // 
+            this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
+            this.clientsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientsToolStripMenuItem.Text = "Clients";
+            // 
+            // fournisseursToolStripMenuItem
+            // 
+            this.fournisseursToolStripMenuItem.Name = "fournisseursToolStripMenuItem";
+            this.fournisseursToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fournisseursToolStripMenuItem.Text = "Fournisseurs";
+            // 
+            // baremeToolStripMenuItem
+            // 
+            this.baremeToolStripMenuItem.Name = "baremeToolStripMenuItem";
+            this.baremeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.baremeToolStripMenuItem.Text = "Bareme";
+            // 
+            // ressourceToolStripMenuItem
+            // 
+            this.ressourceToolStripMenuItem.Name = "ressourceToolStripMenuItem";
+            this.ressourceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ressourceToolStripMenuItem.Text = "Ressource";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(221, 6);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(221, 6);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(221, 6);
+            // 
+            // clientToolStripMenuItem
+            // 
+            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientToolStripMenuItem.Text = "Client";
+            // 
+            // fournisseurToolStripMenuItem
+            // 
+            this.fournisseurToolStripMenuItem.Name = "fournisseurToolStripMenuItem";
+            this.fournisseurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fournisseurToolStripMenuItem.Text = "Fournisseur";
+            this.fournisseurToolStripMenuItem.Click += new System.EventHandler(this.fournisseurToolStripMenuItem_Click);
             // 
             // Parent
             // 
@@ -690,10 +855,30 @@ namespace WinForm
         private System.Windows.Forms.Panel panellogo;
         private System.Windows.Forms.ToolStripMenuItem documentDeVenteToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem documentDachatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentDeStockToolStripMenuItem;
         private System.Windows.Forms.Button butsortir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem saisieDinventaireToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miseAJourDeLagentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miseAJourDeLaComptabiliteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem archivageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem familleArticleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem articleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem nommenclatureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fournisseursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripMenuItem baremeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ressourceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fournisseurToolStripMenuItem;
     }
 }
 

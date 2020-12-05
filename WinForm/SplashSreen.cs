@@ -15,30 +15,22 @@ namespace WinForm
         public SplashSreen()
         {
             InitializeComponent();
-            timer1.Tick += timer2_Tick;
-            timer1.Enabled = true;
-            timer1.Interval = 3000;
-            timer1.Enabled = true;
-            
-
         }
-
-        private void SplashSreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Enabled = false;
-            Connexion principal = new Connexion();
-            principal.Show();
-            this.Close();
+            Panel2.Width += 3;
+            if(Panel2.Width >= 528)
+            {
+                timer1.Stop();
+                Connexion principal = new Connexion();
+                principal.Show();
+                this.Hide();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

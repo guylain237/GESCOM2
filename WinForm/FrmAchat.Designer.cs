@@ -37,7 +37,6 @@ namespace WinForm
             this.lblQuantite = new System.Windows.Forms.Label();
             this.txtFournisseur = new System.Windows.Forms.TextBox();
             this.lblFournisseur = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
             this.txtDesignation = new System.Windows.Forms.TextBox();
             this.lblDesignateur = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@ namespace WinForm
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblCode
@@ -107,7 +107,7 @@ namespace WinForm
             this.txtFournisseur.Margin = new System.Windows.Forms.Padding(5);
             this.txtFournisseur.Name = "txtFournisseur";
             this.txtFournisseur.Size = new System.Drawing.Size(547, 34);
-            this.txtFournisseur.TabIndex = 7;
+            this.txtFournisseur.TabIndex = 9;
             // 
             // lblFournisseur
             // 
@@ -116,15 +116,8 @@ namespace WinForm
             this.lblFournisseur.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblFournisseur.Name = "lblFournisseur";
             this.lblFournisseur.Size = new System.Drawing.Size(187, 29);
-            this.lblFournisseur.TabIndex = 6;
+            this.lblFournisseur.TabIndex = 8;
             this.lblFournisseur.Text = "FOURNISSEUR";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 517);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(367, 34);
-            this.dateTimePicker1.TabIndex = 8;
             // 
             // lblDate
             // 
@@ -132,9 +125,9 @@ namespace WinForm
             this.lblDate.Location = new System.Drawing.Point(19, 485);
             this.lblDate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(77, 29);
-            this.lblDate.TabIndex = 9;
-            this.lblDate.Text = "DATE";
+            this.lblDate.Size = new System.Drawing.Size(135, 29);
+            this.lblDate.TabIndex = 10;
+            this.lblDate.Text = "MONTANT";
             // 
             // txtDesignation
             // 
@@ -142,7 +135,7 @@ namespace WinForm
             this.txtDesignation.Margin = new System.Windows.Forms.Padding(5);
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Size = new System.Drawing.Size(547, 34);
-            this.txtDesignation.TabIndex = 11;
+            this.txtDesignation.TabIndex = 7;
             // 
             // lblDesignateur
             // 
@@ -151,7 +144,7 @@ namespace WinForm
             this.lblDesignateur.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDesignateur.Name = "lblDesignateur";
             this.lblDesignateur.Size = new System.Drawing.Size(185, 29);
-            this.lblDesignateur.TabIndex = 10;
+            this.lblDesignateur.TabIndex = 6;
             this.lblDesignateur.Text = "DESIGNATEUR";
             // 
             // btnEnregistrer
@@ -181,7 +174,7 @@ namespace WinForm
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 44);
-            this.button1.TabIndex = 14;
+            this.button1.TabIndex = 15;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -192,10 +185,17 @@ namespace WinForm
             this.button2.Location = new System.Drawing.Point(514, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 34);
-            this.button2.TabIndex = 15;
+            this.button2.TabIndex = 14;
             this.button2.Text = "Explorer";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(19, 533);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(542, 34);
+            this.dateTimePicker1.TabIndex = 11;
             // 
             // FrmAchat
             // 
@@ -204,6 +204,7 @@ namespace WinForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnAnnuler;
             this.ClientSize = new System.Drawing.Size(648, 707);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAnnuler);
@@ -211,7 +212,6 @@ namespace WinForm
             this.Controls.Add(this.txtDesignation);
             this.Controls.Add(this.lblDesignateur);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtFournisseur);
             this.Controls.Add(this.lblFournisseur);
             this.Controls.Add(this.txtQuantite);
@@ -240,7 +240,6 @@ namespace WinForm
         private System.Windows.Forms.Label lblQuantite;
         private System.Windows.Forms.TextBox txtFournisseur;
         private System.Windows.Forms.Label lblFournisseur;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.TextBox txtDesignation;
         private System.Windows.Forms.Label lblDesignateur;
@@ -248,5 +247,6 @@ namespace WinForm
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox dateTimePicker1;
     }
 }

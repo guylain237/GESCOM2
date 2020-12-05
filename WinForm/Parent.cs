@@ -132,7 +132,7 @@ namespace WinForm
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new FrmAchat());
+            openChildForm(new FrmEditAchat());
             hideSubmenu();
         }
 
@@ -184,6 +184,12 @@ namespace WinForm
         private void button6_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void fournisseurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFournisseur fr = new FrmFournisseur();
+            fr.Show();
         }
     }
 }

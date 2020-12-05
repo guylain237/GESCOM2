@@ -110,6 +110,12 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFournisseur.Designer.cs">
+      <DependentUpon>FrmFournisseur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditAchat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFournisseur.resx">
+      <DependentUpon>FrmFournisseur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditAchat.resx">
       <DependentUpon>FrmEditAchat.cs</DependentUpon>

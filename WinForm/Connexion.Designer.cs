@@ -54,7 +54,7 @@ namespace WinForm
             this.button3.Location = new System.Drawing.Point(509, 474);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(248, 58);
-            this.button3.TabIndex = 20;
+            this.button3.TabIndex = 1;
             this.button3.Text = "Quitter";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -64,7 +64,7 @@ namespace WinForm
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.BackColor = System.Drawing.Color.Teal;
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -88,7 +88,7 @@ namespace WinForm
             this.checkBox1.Location = new System.Drawing.Point(445, 236);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(166, 21);
-            this.checkBox1.TabIndex = 6;
+            this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "afficher les caracteres";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -103,28 +103,28 @@ namespace WinForm
             this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(203, 20);
-            this.label5.TabIndex = 5;
+            this.label5.TabIndex = 4;
             this.label5.Text = "Mot de passe incorrect";
             this.label5.Visible = false;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(414, 60);
+            this.textBox1.Location = new System.Drawing.Point(328, 60);
             this.textBox1.Margin = new System.Windows.Forms.Padding(7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(310, 45);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.Size = new System.Drawing.Size(396, 45);
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 67);
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 69);
             this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 38);
+            this.label1.Size = new System.Drawing.Size(288, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "NOM UTILISATEUR";
             // 
@@ -132,21 +132,21 @@ namespace WinForm
             // 
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 168);
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 170);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 38);
-            this.label2.TabIndex = 1;
+            this.label2.Size = new System.Drawing.Size(228, 31);
+            this.label2.TabIndex = 2;
             this.label2.Text = "MOT DE PASSE";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(414, 161);
+            this.textBox2.Location = new System.Drawing.Point(328, 161);
             this.textBox2.Margin = new System.Windows.Forms.Padding(7);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(310, 45);
+            this.textBox2.Size = new System.Drawing.Size(396, 45);
             this.textBox2.TabIndex = 3;
             // 
             // butok
@@ -158,7 +158,7 @@ namespace WinForm
             this.butok.Location = new System.Drawing.Point(156, 474);
             this.butok.Name = "butok";
             this.butok.Size = new System.Drawing.Size(248, 58);
-            this.butok.TabIndex = 18;
+            this.butok.TabIndex = 0;
             this.butok.Text = "Se connecter";
             this.butok.UseVisualStyleBackColor = false;
             this.butok.Click += new System.EventHandler(this.butok_Click);
@@ -182,9 +182,9 @@ namespace WinForm
             this.label3.Location = new System.Drawing.Point(388, 50);
             this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(344, 76);
+            this.label3.Size = new System.Drawing.Size(191, 38);
             this.label3.TabIndex = 7;
-            this.label3.Text = "CONFIDENTIELLES \r\n\r\n";
+            this.label3.Text = "SECURITE";
             // 
             // panel2
             // 
@@ -197,9 +197,10 @@ namespace WinForm
             // 
             // Connexion
             // 
+            this.AcceptButton = this.butok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(908, 595);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);

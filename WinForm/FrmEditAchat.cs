@@ -141,5 +141,10 @@ namespace WinForm
             Form f = new FrmPrint("PRINT.rdlc", items);
             f.Show();
         }
+
+        private void dataGridViewa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
