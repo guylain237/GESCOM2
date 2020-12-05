@@ -48,6 +48,7 @@ namespace WinForm
             this.reportViewerAchat.ServerReport.BearerToken = null;
             this.reportViewerAchat.Size = new System.Drawing.Size(874, 485);
             this.reportViewerAchat.TabIndex = 0;
+            this.reportViewerAchat.Load += new System.EventHandler(this.reportViewerAchat_Load);
             // 
             // ImpAchatBindingSource
             // 

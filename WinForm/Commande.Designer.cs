@@ -30,22 +30,16 @@ namespace WinForm
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.COMPTOIRBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewerVente = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.COMPTOIRBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ImpAchatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.COMPTOIRBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImpAchatBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // COMPTOIRBindingSource
-            // 
-            this.COMPTOIRBindingSource.DataSource = typeof(GESCOM.BO.COMPTOIR);
             // 
             // reportViewerVente
             // 
             this.reportViewerVente.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.COMPTOIRBindingSource;
-            this.reportViewerVente.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerVente.LocalReport.ReportEmbeddedResource = "WinForm.Impression.rdlc";
             this.reportViewerVente.Location = new System.Drawing.Point(0, 0);
             this.reportViewerVente.Name = "reportViewerVente";
@@ -53,6 +47,14 @@ namespace WinForm
             this.reportViewerVente.Size = new System.Drawing.Size(956, 554);
             this.reportViewerVente.TabIndex = 0;
             this.reportViewerVente.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // COMPTOIRBindingSource
+            // 
+            this.COMPTOIRBindingSource.DataSource = typeof(GESCOM.BO.COMPTOIR);
+            // 
+            // ImpAchatBindingSource
+            // 
+            this.ImpAchatBindingSource.DataSource = typeof(WinForm.ImpAchat);
             // 
             // Commande
             // 
@@ -64,6 +66,7 @@ namespace WinForm
             this.Text = "Commande";
             this.Load += new System.EventHandler(this.Commande_Load);
             ((System.ComponentModel.ISupportInitialize)(this.COMPTOIRBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImpAchatBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -72,5 +75,6 @@ namespace WinForm
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerVente;
         private System.Windows.Forms.BindingSource COMPTOIRBindingSource;
+        private System.Windows.Forms.BindingSource ImpAchatBindingSource;
     }
 }

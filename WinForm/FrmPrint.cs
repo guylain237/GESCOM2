@@ -28,7 +28,7 @@ namespace WinForm
 
         private void FrmPrint_Load(object sender, EventArgs e)
         {
-            this.reportViewerAchat.LocalReport.ReportPath = "FrmPrint.rdlc";
+            this.reportViewerAchat.LocalReport.ReportPath = "PRINT.rdlc";
             this.reportViewerAchat.LocalReport.DataSources.Add(
                 new Microsoft.Reporting.WinForms.ReportDataSource(
               "DataSet1",
@@ -42,6 +42,11 @@ namespace WinForm
             this.reportViewerAchat.ZoomPercent = 70;
 
             this.reportViewerAchat.RefreshReport();
+        }
+
+        private void reportViewerAchat_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,6 +41,7 @@ namespace WinForm
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,7 @@ namespace WinForm
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -106,6 +108,7 @@ namespace WinForm
             this.label5.TabIndex = 4;
             this.label5.Text = "Mot de passe incorrect";
             this.label5.Visible = false;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox1
             // 
@@ -195,6 +198,20 @@ namespace WinForm
             this.panel2.Size = new System.Drawing.Size(270, 126);
             this.panel2.TabIndex = 22;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(430, 112);
+            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(275, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "NOM D\'UTILISATEUR incorrect";
+            this.label4.Visible = false;
+            // 
             // Connexion
             // 
             this.AcceptButton = this.butok;
@@ -208,6 +225,7 @@ namespace WinForm
             this.Controls.Add(this.butok);
             this.Name = "Connexion";
             this.Text = "Connexion";
+            this.Load += new System.EventHandler(this.Connexion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -230,5 +248,6 @@ namespace WinForm
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
     }
 }

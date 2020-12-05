@@ -57,26 +57,14 @@ namespace WinForm
             this.etatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panelGest = new System.Windows.Forms.Panel();
-            this.panelArticle = new System.Windows.Forms.Panel();
-            this.butsortir = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.btnArticle = new System.Windows.Forms.Button();
             this.panelAchat = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.btnAchat = new System.Windows.Forms.Button();
             this.panelVente = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.buttCOMPTOIR = new System.Windows.Forms.Button();
             this.btnHistorique = new System.Windows.Forms.Button();
-            this.btnVente = new System.Windows.Forms.Button();
-            this.panellogo = new System.Windows.Forms.Panel();
-            this.panelChilForm = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saisieDinventaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,13 +85,26 @@ namespace WinForm
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fournisseurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelChilForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelArticle = new System.Windows.Forms.Panel();
+            this.butsortir = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btnArticle = new System.Windows.Forms.Button();
+            this.btnAchat = new System.Windows.Forms.Button();
+            this.btnVente = new System.Windows.Forms.Button();
+            this.panellogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelGest.SuspendLayout();
-            this.panelArticle.SuspendLayout();
             this.panelAchat.SuspendLayout();
             this.panelVente.SuspendLayout();
             this.panelChilForm.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelArticle.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -119,7 +120,7 @@ namespace WinForm
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1198, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1046, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -338,110 +339,8 @@ namespace WinForm
             this.panelGest.Location = new System.Drawing.Point(0, 28);
             this.panelGest.Margin = new System.Windows.Forms.Padding(2);
             this.panelGest.Name = "panelGest";
-            this.panelGest.Size = new System.Drawing.Size(331, 561);
+            this.panelGest.Size = new System.Drawing.Size(331, 585);
             this.panelGest.TabIndex = 2;
-            // 
-            // panelArticle
-            // 
-            this.panelArticle.BackColor = System.Drawing.Color.Teal;
-            this.panelArticle.BackgroundImage = global::WinForm.Properties.Resources.logo;
-            this.panelArticle.Controls.Add(this.butsortir);
-            this.panelArticle.Controls.Add(this.button10);
-            this.panelArticle.Controls.Add(this.button9);
-            this.panelArticle.Controls.Add(this.button8);
-            this.panelArticle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelArticle.Location = new System.Drawing.Point(0, 943);
-            this.panelArticle.Margin = new System.Windows.Forms.Padding(2);
-            this.panelArticle.Name = "panelArticle";
-            this.panelArticle.Size = new System.Drawing.Size(310, 214);
-            this.panelArticle.TabIndex = 8;
-            // 
-            // butsortir
-            // 
-            this.butsortir.BackColor = System.Drawing.Color.Red;
-            this.butsortir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butsortir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.butsortir.Location = new System.Drawing.Point(0, 165);
-            this.butsortir.Name = "butsortir";
-            this.butsortir.Size = new System.Drawing.Size(310, 49);
-            this.butsortir.TabIndex = 5;
-            this.butsortir.Text = "Sortir";
-            this.butsortir.UseVisualStyleBackColor = false;
-            this.butsortir.Click += new System.EventHandler(this.butsortir_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 121);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(310, 60);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "button10";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 63);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(310, 58);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "button9";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(310, 63);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "button8";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // btnArticle
-            // 
-            this.btnArticle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnArticle.FlatAppearance.BorderSize = 0;
-            this.btnArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticle.ForeColor = System.Drawing.Color.White;
-            this.btnArticle.Image = ((System.Drawing.Image)(resources.GetObject("btnArticle.Image")));
-            this.btnArticle.Location = new System.Drawing.Point(0, 847);
-            this.btnArticle.Margin = new System.Windows.Forms.Padding(2);
-            this.btnArticle.Name = "btnArticle";
-            this.btnArticle.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnArticle.Size = new System.Drawing.Size(310, 96);
-            this.btnArticle.TabIndex = 10;
-            this.btnArticle.Text = "Gestion des Articles et Stocks";
-            this.btnArticle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArticle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnArticle.UseVisualStyleBackColor = true;
-            this.btnArticle.Click += new System.EventHandler(this.btnArticle_Click_1);
             // 
             // panelAchat
             // 
@@ -449,7 +348,7 @@ namespace WinForm
             this.panelAchat.Controls.Add(this.button5);
             this.panelAchat.Controls.Add(this.button4);
             this.panelAchat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAchat.Location = new System.Drawing.Point(0, 633);
+            this.panelAchat.Location = new System.Drawing.Point(0, 628);
             this.panelAchat.Margin = new System.Windows.Forms.Padding(2);
             this.panelAchat.Name = "panelAchat";
             this.panelAchat.Size = new System.Drawing.Size(310, 214);
@@ -457,11 +356,11 @@ namespace WinForm
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button6.BackColor = System.Drawing.Color.Teal;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Nirmala UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(0, 140);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
@@ -476,11 +375,11 @@ namespace WinForm
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button5.BackColor = System.Drawing.Color.Teal;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Nirmala UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(0, 70);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
@@ -495,11 +394,11 @@ namespace WinForm
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button4.BackColor = System.Drawing.Color.Teal;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Nirmala UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(0, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
@@ -512,33 +411,13 @@ namespace WinForm
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // btnAchat
-            // 
-            this.btnAchat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAchat.FlatAppearance.BorderSize = 0;
-            this.btnAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAchat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAchat.ForeColor = System.Drawing.Color.White;
-            this.btnAchat.Image = ((System.Drawing.Image)(resources.GetObject("btnAchat.Image")));
-            this.btnAchat.Location = new System.Drawing.Point(0, 533);
-            this.btnAchat.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAchat.Name = "btnAchat";
-            this.btnAchat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnAchat.Size = new System.Drawing.Size(310, 100);
-            this.btnAchat.TabIndex = 7;
-            this.btnAchat.Text = "Gestion des Achats";
-            this.btnAchat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAchat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAchat.UseVisualStyleBackColor = true;
-            this.btnAchat.Click += new System.EventHandler(this.btnAchat_Click_1);
-            // 
             // panelVente
             // 
             this.panelVente.Controls.Add(this.button3);
             this.panelVente.Controls.Add(this.buttCOMPTOIR);
             this.panelVente.Controls.Add(this.btnHistorique);
             this.panelVente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVente.Location = new System.Drawing.Point(0, 319);
+            this.panelVente.Location = new System.Drawing.Point(0, 314);
             this.panelVente.Margin = new System.Windows.Forms.Padding(2);
             this.panelVente.Name = "panelVente";
             this.panelVente.Size = new System.Drawing.Size(310, 214);
@@ -546,11 +425,11 @@ namespace WinForm
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button3.BackColor = System.Drawing.Color.Teal;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Nirmala UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(0, 140);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
@@ -564,11 +443,11 @@ namespace WinForm
             // 
             // buttCOMPTOIR
             // 
-            this.buttCOMPTOIR.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttCOMPTOIR.BackColor = System.Drawing.Color.Teal;
             this.buttCOMPTOIR.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttCOMPTOIR.FlatAppearance.BorderSize = 0;
             this.buttCOMPTOIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttCOMPTOIR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttCOMPTOIR.Font = new System.Drawing.Font("Nirmala UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttCOMPTOIR.ForeColor = System.Drawing.Color.White;
             this.buttCOMPTOIR.Location = new System.Drawing.Point(0, 70);
             this.buttCOMPTOIR.Margin = new System.Windows.Forms.Padding(2);
@@ -576,18 +455,18 @@ namespace WinForm
             this.buttCOMPTOIR.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.buttCOMPTOIR.Size = new System.Drawing.Size(310, 70);
             this.buttCOMPTOIR.TabIndex = 1;
-            this.buttCOMPTOIR.Text = "COMPTOIRE";
+            this.buttCOMPTOIR.Text = "COMPTOIR";
             this.buttCOMPTOIR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttCOMPTOIR.UseVisualStyleBackColor = false;
             this.buttCOMPTOIR.Click += new System.EventHandler(this.buttCOMPTOIR_Click);
             // 
             // btnHistorique
             // 
-            this.btnHistorique.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnHistorique.BackColor = System.Drawing.Color.Teal;
             this.btnHistorique.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistorique.FlatAppearance.BorderSize = 0;
             this.btnHistorique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorique.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorique.Font = new System.Drawing.Font("Nirmala UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorique.ForeColor = System.Drawing.Color.White;
             this.btnHistorique.Location = new System.Drawing.Point(0, 0);
             this.btnHistorique.Margin = new System.Windows.Forms.Padding(2);
@@ -600,81 +479,16 @@ namespace WinForm
             this.btnHistorique.UseVisualStyleBackColor = false;
             this.btnHistorique.Click += new System.EventHandler(this.btnHistorique_Click);
             // 
-            // btnVente
-            // 
-            this.btnVente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVente.FlatAppearance.BorderSize = 0;
-            this.btnVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVente.ForeColor = System.Drawing.Color.White;
-            this.btnVente.Image = ((System.Drawing.Image)(resources.GetObject("btnVente.Image")));
-            this.btnVente.Location = new System.Drawing.Point(0, 211);
-            this.btnVente.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVente.Name = "btnVente";
-            this.btnVente.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnVente.Size = new System.Drawing.Size(310, 108);
-            this.btnVente.TabIndex = 5;
-            this.btnVente.Text = "Gestion des Ventes";
-            this.btnVente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVente.UseVisualStyleBackColor = true;
-            this.btnVente.Click += new System.EventHandler(this.btnVente_Click);
-            // 
-            // panellogo
-            // 
-            this.panellogo.BackColor = System.Drawing.Color.Red;
-            this.panellogo.BackgroundImage = global::WinForm.Properties.Resources.logo;
-            this.panellogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panellogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panellogo.Location = new System.Drawing.Point(0, 0);
-            this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(310, 211);
-            this.panellogo.TabIndex = 0;
-            // 
-            // panelChilForm
-            // 
-            this.panelChilForm.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panelChilForm.BackgroundImage = global::WinForm.Properties.Resources.logo;
-            this.panelChilForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelChilForm.Controls.Add(this.panel1);
-            this.panelChilForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChilForm.Location = new System.Drawing.Point(331, 28);
-            this.panelChilForm.Margin = new System.Windows.Forms.Padding(2);
-            this.panelChilForm.Name = "panelChilForm";
-            this.panelChilForm.Size = new System.Drawing.Size(867, 561);
-            this.panelChilForm.TabIndex = 3;
-            this.panelChilForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChilForm_Paint);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 507);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(867, 54);
-            this.panel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(758, 39);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "presentation du projet de gestion commerciale";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.aideToolStripMenuItem.Text = "Aide";
             // 
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.aProposToolStripMenuItem.Text = "A propos";
             // 
             // saisieDinventaireToolStripMenuItem
@@ -714,78 +528,281 @@ namespace WinForm
             // familleArticleToolStripMenuItem
             // 
             this.familleArticleToolStripMenuItem.Name = "familleArticleToolStripMenuItem";
-            this.familleArticleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.familleArticleToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.familleArticleToolStripMenuItem.Text = "Famille Article";
             // 
             // articleToolStripMenuItem
             // 
             this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
-            this.articleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.articleToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.articleToolStripMenuItem.Text = "Article";
             // 
             // nommenclatureToolStripMenuItem
             // 
             this.nommenclatureToolStripMenuItem.Name = "nommenclatureToolStripMenuItem";
-            this.nommenclatureToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nommenclatureToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.nommenclatureToolStripMenuItem.Text = "Nommenclature";
             // 
             // clientsToolStripMenuItem
             // 
             this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
-            this.clientsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientsToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.clientsToolStripMenuItem.Text = "Clients";
             // 
             // fournisseursToolStripMenuItem
             // 
             this.fournisseursToolStripMenuItem.Name = "fournisseursToolStripMenuItem";
-            this.fournisseursToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fournisseursToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.fournisseursToolStripMenuItem.Text = "Fournisseurs";
             // 
             // baremeToolStripMenuItem
             // 
             this.baremeToolStripMenuItem.Name = "baremeToolStripMenuItem";
-            this.baremeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.baremeToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.baremeToolStripMenuItem.Text = "Bareme";
             // 
             // ressourceToolStripMenuItem
             // 
             this.ressourceToolStripMenuItem.Name = "ressourceToolStripMenuItem";
-            this.ressourceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ressourceToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.ressourceToolStripMenuItem.Text = "Ressource";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(196, 6);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(196, 6);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(196, 6);
             // 
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.clientToolStripMenuItem.Text = "Client";
             // 
             // fournisseurToolStripMenuItem
             // 
             this.fournisseurToolStripMenuItem.Name = "fournisseurToolStripMenuItem";
-            this.fournisseurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fournisseurToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.fournisseurToolStripMenuItem.Text = "Fournisseur";
             this.fournisseurToolStripMenuItem.Click += new System.EventHandler(this.fournisseurToolStripMenuItem_Click);
+            // 
+            // panelChilForm
+            // 
+            this.panelChilForm.BackColor = System.Drawing.Color.White;
+            this.panelChilForm.BackgroundImage = global::WinForm.Properties.Resources.sacs_achats;
+            this.panelChilForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelChilForm.Controls.Add(this.panel1);
+            this.panelChilForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChilForm.Location = new System.Drawing.Point(331, 28);
+            this.panelChilForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panelChilForm.Name = "panelChilForm";
+            this.panelChilForm.Size = new System.Drawing.Size(715, 585);
+            this.panelChilForm.TabIndex = 3;
+            this.panelChilForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChilForm_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 531);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(715, 54);
+            this.panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 39);
+            this.label1.TabIndex = 11;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelArticle
+            // 
+            this.panelArticle.BackColor = System.Drawing.Color.Teal;
+            this.panelArticle.BackgroundImage = global::WinForm.Properties.Resources.logo;
+            this.panelArticle.Controls.Add(this.butsortir);
+            this.panelArticle.Controls.Add(this.button10);
+            this.panelArticle.Controls.Add(this.button9);
+            this.panelArticle.Controls.Add(this.button8);
+            this.panelArticle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelArticle.Location = new System.Drawing.Point(0, 938);
+            this.panelArticle.Margin = new System.Windows.Forms.Padding(2);
+            this.panelArticle.Name = "panelArticle";
+            this.panelArticle.Size = new System.Drawing.Size(310, 214);
+            this.panelArticle.TabIndex = 8;
+            // 
+            // butsortir
+            // 
+            this.butsortir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.butsortir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butsortir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.butsortir.Location = new System.Drawing.Point(0, 165);
+            this.butsortir.Name = "butsortir";
+            this.butsortir.Size = new System.Drawing.Size(310, 49);
+            this.butsortir.TabIndex = 5;
+            this.butsortir.Text = "Quitter";
+            this.butsortir.UseVisualStyleBackColor = false;
+            this.butsortir.Click += new System.EventHandler(this.butsortir_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Teal;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(0, 121);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
+            this.button10.Name = "button10";
+            this.button10.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button10.Size = new System.Drawing.Size(310, 60);
+            this.button10.TabIndex = 2;
+            this.button10.Text = "button10";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Teal;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(0, 63);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
+            this.button9.Name = "button9";
+            this.button9.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button9.Size = new System.Drawing.Size(310, 58);
+            this.button9.TabIndex = 1;
+            this.button9.Text = "button9";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Teal;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(0, 0);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button8.Size = new System.Drawing.Size(310, 63);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "button8";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // btnArticle
+            // 
+            this.btnArticle.BackColor = System.Drawing.Color.Navy;
+            this.btnArticle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnArticle.FlatAppearance.BorderSize = 0;
+            this.btnArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArticle.ForeColor = System.Drawing.Color.White;
+            this.btnArticle.Image = ((System.Drawing.Image)(resources.GetObject("btnArticle.Image")));
+            this.btnArticle.Location = new System.Drawing.Point(0, 842);
+            this.btnArticle.Margin = new System.Windows.Forms.Padding(2);
+            this.btnArticle.Name = "btnArticle";
+            this.btnArticle.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnArticle.Size = new System.Drawing.Size(310, 96);
+            this.btnArticle.TabIndex = 10;
+            this.btnArticle.Text = "Gestion des Stocks";
+            this.btnArticle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnArticle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnArticle.UseVisualStyleBackColor = false;
+            this.btnArticle.Click += new System.EventHandler(this.btnArticle_Click_1);
+            // 
+            // btnAchat
+            // 
+            this.btnAchat.BackColor = System.Drawing.Color.Navy;
+            this.btnAchat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAchat.FlatAppearance.BorderSize = 0;
+            this.btnAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAchat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAchat.ForeColor = System.Drawing.Color.White;
+            this.btnAchat.Image = ((System.Drawing.Image)(resources.GetObject("btnAchat.Image")));
+            this.btnAchat.Location = new System.Drawing.Point(0, 528);
+            this.btnAchat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAchat.Name = "btnAchat";
+            this.btnAchat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnAchat.Size = new System.Drawing.Size(310, 100);
+            this.btnAchat.TabIndex = 7;
+            this.btnAchat.Text = "Gestion des Achats";
+            this.btnAchat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAchat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAchat.UseVisualStyleBackColor = false;
+            this.btnAchat.Click += new System.EventHandler(this.btnAchat_Click_1);
+            // 
+            // btnVente
+            // 
+            this.btnVente.BackColor = System.Drawing.Color.Navy;
+            this.btnVente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVente.FlatAppearance.BorderSize = 0;
+            this.btnVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVente.ForeColor = System.Drawing.Color.White;
+            this.btnVente.Image = ((System.Drawing.Image)(resources.GetObject("btnVente.Image")));
+            this.btnVente.Location = new System.Drawing.Point(0, 206);
+            this.btnVente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVente.Name = "btnVente";
+            this.btnVente.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnVente.Size = new System.Drawing.Size(310, 108);
+            this.btnVente.TabIndex = 5;
+            this.btnVente.Text = "Gestion des Ventes";
+            this.btnVente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVente.UseVisualStyleBackColor = false;
+            this.btnVente.Click += new System.EventHandler(this.btnVente_Click);
+            // 
+            // panellogo
+            // 
+            this.panellogo.BackColor = System.Drawing.Color.Red;
+            this.panellogo.BackgroundImage = global::WinForm.Properties.Resources.logo;
+            this.panellogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panellogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panellogo.Location = new System.Drawing.Point(0, 0);
+            this.panellogo.Name = "panellogo";
+            this.panellogo.Size = new System.Drawing.Size(310, 206);
+            this.panellogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(58, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1031, 36);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "                                                   presentation du projet de gest" +
+    "ion commerciale";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Parent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 589);
+            this.ClientSize = new System.Drawing.Size(1046, 613);
             this.Controls.Add(this.panelChilForm);
             this.Controls.Add(this.panelGest);
             this.Controls.Add(this.menuStrip1);
@@ -799,12 +816,12 @@ namespace WinForm
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelGest.ResumeLayout(false);
-            this.panelArticle.ResumeLayout(false);
             this.panelAchat.ResumeLayout(false);
             this.panelVente.ResumeLayout(false);
             this.panelChilForm.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelArticle.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,6 +896,7 @@ namespace WinForm
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fournisseurToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
     }
 }
 

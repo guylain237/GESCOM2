@@ -268,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.jpg" />
+    <None Include="Resources\images %281%29.jpeg" />
+    <None Include="Resources\sacs-achats.jpg" />
+    <None Include="Resources\68cbfb7f5575a2d85c76381e42195d9d.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

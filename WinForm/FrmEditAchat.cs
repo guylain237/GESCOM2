@@ -114,11 +114,11 @@ namespace WinForm
 
         private void btnImprimer_Click(object sender, EventArgs e)
         {
-            List<ImpAchat> items = new List<ImpAchat>();
+            List<ImpAchat> item = new List<ImpAchat>();
             for (int i = 0; i < dataGridViewa.Rows.Count; i++)
             {
                 Achat A = dataGridViewa.Rows[i].DataBoundItem as Achat;
-                items.Add
+                item.Add
                     (
                     new ImpAchat
                     (
@@ -138,7 +138,7 @@ namespace WinForm
 
 
             }
-            Form f = new FrmPrint("PRINT.rdlc", items);
+            Form f = new FrmPrint("PRINT.rdlc", item);
             f.Show();
         }
 

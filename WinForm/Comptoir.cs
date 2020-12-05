@@ -289,5 +289,25 @@ namespace WinForm
         {
             Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textDESIGNATION_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textCODE_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

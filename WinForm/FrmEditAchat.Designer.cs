@@ -50,7 +50,7 @@ namespace WinForm
             // btnModifier
             // 
             this.btnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModifier.BackColor = System.Drawing.Color.Red;
+            this.btnModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifier.Location = new System.Drawing.Point(969, 238);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -63,13 +63,14 @@ namespace WinForm
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Red;
             this.button5.Location = new System.Drawing.Point(16, 15);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(45, 31);
             this.button5.TabIndex = 5;
             this.button5.Text = "X";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridViewa
@@ -95,7 +96,7 @@ namespace WinForm
             // btnSupprimer
             // 
             this.btnSupprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSupprimer.BackColor = System.Drawing.Color.Aqua;
+            this.btnSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupprimer.Location = new System.Drawing.Point(969, 386);
             this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -109,7 +110,7 @@ namespace WinForm
             // btnActualiser
             // 
             this.btnActualiser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualiser.BackColor = System.Drawing.Color.Yellow;
+            this.btnActualiser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualiser.Location = new System.Drawing.Point(969, 535);
             this.btnActualiser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -123,7 +124,7 @@ namespace WinForm
             // btnImprimer
             // 
             this.btnImprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImprimer.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnImprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnImprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimer.Location = new System.Drawing.Point(969, 670);
             this.btnImprimer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -146,9 +147,9 @@ namespace WinForm
             // butnouveau
             // 
             this.butnouveau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butnouveau.BackColor = System.Drawing.Color.Lime;
+            this.butnouveau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.butnouveau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butnouveau.ForeColor = System.Drawing.Color.Red;
+            this.butnouveau.ForeColor = System.Drawing.Color.Black;
             this.butnouveau.Location = new System.Drawing.Point(969, 103);
             this.butnouveau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.butnouveau.Name = "butnouveau";
